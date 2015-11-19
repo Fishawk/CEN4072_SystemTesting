@@ -35,6 +35,12 @@ public class STC01_RegisterPanelistAccount extends
 		// reset the database
 		SetDB.resetDB();
 		
+		// WHo is Who
+		final boolean SUNNY = dpString("TestType").equalsIgnoreCase("Sunny");
+		final boolean RAINY1 = dpString("TestType").equalsIgnoreCase("Rainy");
+		final boolean RAINY3 = dpString("TestType").equalsIgnoreCase("Rainy3");
+
+		
 		// HTML Browser
 		// Document: ISC Control System:
 		// http://localhost:8080/International_Science_Consortium/
@@ -119,19 +125,34 @@ public class STC01_RegisterPanelistAccount extends
 		button_registersubmit().click();
 
 		// Verification point
-		if (dpString("TestType").equalsIgnoreCase("Sunny")) {
+		if (SUNNY) {
 			// Successful registration
 			browser_htmlBrowser().performTest(SuccessfulRegistrationVP());
-		} else if (dpString("TestType").equalsIgnoreCase("Rainy")) {
+
+			// Close Window
+			browser_htmlBrowser(document_iscControlSystem(), DEFAULT_FLAGS).close();
+			
+			// Reset the Database without credentials
+			SetDB.resetDB();
+		} else if (RAINY1) {
 			// Failed registration
 			browser_htmlBrowser().performTest(FailedRegistrationVP());
-		}
 
-		// Close Window
-		browser_htmlBrowser(document_iscControlSystem(), DEFAULT_FLAGS).close();
-		
-		// Reset the Database
-		SetDB.resetDB();
+			// Close Window
+			browser_htmlBrowser(document_iscControlSystem(), DEFAULT_FLAGS).close();
+			
+			// Reset the Database without credentials
+			SetDB.resetDB();
+		}else if (RAINY3) {
+			// Failed registration
+			browser_htmlBrowser().performTest(FailedRegistrationVP());
+
+			// Close Window
+			browser_htmlBrowser(document_iscControlSystem(), DEFAULT_FLAGS).close();
+			
+			// Reset the Database with credentials 
+			SetDB.ResetDB();
+		}
 
 	}
 }

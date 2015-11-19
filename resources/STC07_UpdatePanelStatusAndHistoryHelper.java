@@ -20,11 +20,11 @@ import com.rational.test.ft.vp.IFtVerificationPoint;
 import com.ibm.rational.test.ft.object.interfaces.sapwebportal.*;
 /**
  * Script Name   : <b>STC07_UpdatePanelStatusAndHistory</b><br>
- * Generated     : <b>2015/11/18 9:59:27 AM</b><br>
+ * Generated     : <b>2015/11/19 12:09:24 AM</b><br>
  * Description   : Helper class for script<br>
  * Original Host : Windows 8.1 x86 6.3 <br>
  * 
- * @since  November 18, 2015
+ * @since  November 19, 2015
  * @author John
  */
 public abstract class STC07_UpdatePanelStatusAndHistoryHelper extends RationalTestScript
@@ -391,6 +391,33 @@ public abstract class STC07_UpdatePanelStatusAndHistoryHelper extends RationalTe
 	}
 	
 	/**
+	 * HtmlTable_1: with default state.
+	 *		.id : 
+	 * 		.title : 
+	 * 		.class : Html.TABLE
+	 * 		.caption : 
+	 * 		.classIndex : 1
+	 */
+	protected StatelessGuiSubitemTestObject table_htmlTable_1_2() 
+	{
+		return new StatelessGuiSubitemTestObject(
+                        getMappedTestObject("table_htmlTable_1_2"));
+	}
+	/**
+	 * HtmlTable_1: with specific test context and state.
+	 *		.id : 
+	 * 		.title : 
+	 * 		.class : Html.TABLE
+	 * 		.caption : 
+	 * 		.classIndex : 1
+	 */
+	protected StatelessGuiSubitemTestObject table_htmlTable_1_2(TestObject anchor, long flags) 
+	{
+		return new StatelessGuiSubitemTestObject(
+                        getMappedTestObject("table_htmlTable_1_2"), anchor, flags);
+	}
+	
+	/**
 	 * password: with default state.
 	 *		.id : 
 	 * 		.type : password
@@ -521,6 +548,18 @@ public abstract class STC07_UpdatePanelStatusAndHistoryHelper extends RationalTe
 	protected IFtVerificationPoint Rainy2UpdatePanelStatusAndHistoryHtmlTableVP(TestObject anchor)
 	{
 		return vp("Rainy2UpdatePanelStatusAndHistoryHtmlTable", anchor);
+	}
+	
+	/**
+	 * Locate and return the verification point Rainy3UpdatePanelStatusAndHistory object in the SUT.
+	 */
+	protected IFtVerificationPoint Rainy3UpdatePanelStatusAndHistoryVP() 
+	{
+		return vp("Rainy3UpdatePanelStatusAndHistory");
+	}
+	protected IFtVerificationPoint Rainy3UpdatePanelStatusAndHistoryVP(TestObject anchor)
+	{
+		return vp("Rainy3UpdatePanelStatusAndHistory", anchor);
 	}
 	
 	/**

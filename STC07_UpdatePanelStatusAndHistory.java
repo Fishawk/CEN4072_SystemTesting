@@ -25,7 +25,7 @@ public class STC07_UpdatePanelStatusAndHistory extends STC07_UpdatePanelStatusAn
 	 * Original Host : WinNT Version 6.3  Build 9600 ()
 	 * 
 	 * @since  2015/11/18
-	 * @author John
+	 * @author John Burke
 	 */
 	public void testMain(Object[] args) 
 	{
@@ -85,9 +85,6 @@ public class STC07_UpdatePanelStatusAndHistory extends STC07_UpdatePanelStatusAn
 			// click logout button
 			((GuiTestObject)link_logout().find()).click();
 			
-			// close browser
-			browser_htmlBrowser(document_iscControlSystem3(),DEFAULT_FLAGS).close();
-			
 		}else if (RAINY1){
 			// Verification point #1
 			browser_htmlBrowser().performTest(Rainy1UpdatePanelStatusAndHistoryVP());
@@ -98,9 +95,6 @@ public class STC07_UpdatePanelStatusAndHistory extends STC07_UpdatePanelStatusAn
 			// click logout button
 			((GuiTestObject)link_logout().find()).click();
 			
-			// close browser
-			browser_htmlBrowser(document_iscControlSystem3(),DEFAULT_FLAGS).close();
-			
 		}else if (RAINY2){
 			browser_htmlBrowser().performTest(Rainy2UpdatePanelStatusAndHistoryVP());
 			table_htmlTable_0().performTest(Rainy2UpdatePanelStatusAndHistoryHtmlTableVP());
@@ -108,19 +102,53 @@ public class STC07_UpdatePanelStatusAndHistory extends STC07_UpdatePanelStatusAn
 			// click logout button
 			((GuiTestObject)link_logout().find()).click();
 			
-			// close browser
-			browser_htmlBrowser(document_iscControlSystem3(),DEFAULT_FLAGS).close();
-			
 		}else if (RAINY3){
-			// Need Ryan's assistance
-			//verify information straight from database
+			
+			// click display my panels link
+			((GuiTestObject)link_displayMyPanels().find()).click();
+
+			// click view panels link
+			((GuiTestObject)link_viewPanel().find()).click();
+			
+			// HTML Browser
+			table_htmlTable_1_2().performTest(Rainy3UpdatePanelStatusAndHistoryVP());
 			
 			// close browser
 			browser_htmlBrowser(document_iscControlSystem3(),DEFAULT_FLAGS).close();
 
+			// HTML Browser
+			// Document: ISC Control System: 
+			startApp("http://localhost:8080/International_Science_Consortium/");
+			
+			// find and enter user name
+			((TextGuiTestObject)text_username().find()).click();
+			browser_htmlBrowser(document_iscControlSystem(),DEFAULT_FLAGS)
+				.inputChars(dpString("Username"));
+			
+			// find and enter password
+			((TextGuiTestObject)text_password().find()).click();
+			browser_htmlBrowser(document_iscControlSystem(),DEFAULT_FLAGS)
+				.inputChars(dpString("Password"));
+			
+			// click login button
+			button_logInsubmit().click();
+			
+			// click display my panels link
+			((GuiTestObject)link_displayMyPanels().find()).click();
+
+			// click view panels link
+			((GuiTestObject)link_viewPanel().find()).click();
+			
+			// HTML Browser
+			table_htmlTable_1_2().performTest(Rainy3UpdatePanelStatusAndHistoryVP());
+			
 			//verify information straight from database
+			table_htmlTable_1_2().performTest(Rainy3UpdatePanelStatusAndHistoryVP());
 			
 		}
+		
+		// close browser
+		browser_htmlBrowser(document_iscControlSystem3(),DEFAULT_FLAGS).close();
 		
 		// reset the database to a clean slate
 		SetDB.resetDB();

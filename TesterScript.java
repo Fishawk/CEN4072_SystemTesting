@@ -30,9 +30,6 @@ public class TesterScript extends TesterScriptHelper
 	 */
 	public void testMain(Object[] args) throws Exception 
 	{
-
-		// register panelist #1-6 to search
-		//for(int index = 1; index < 7; index++){
 /*
 		int index = 1;
 		while(dpString("Panelist " + index).equalsIgnoreCase("True")){
@@ -64,7 +61,7 @@ public class TesterScript extends TesterScriptHelper
 					dpString("PanelDescription " + index++));
 		}
 */
-		SetDB.resetDB();
+		SetDB.ResetDB();
 	}
 }
 
