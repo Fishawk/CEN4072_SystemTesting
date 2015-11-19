@@ -29,7 +29,7 @@ public class STC04_CreatePanel extends STC04_CreatePanelHelper {
 	public void testMain(Object[] args) {
 
 		// reset the database
-		SetDB.resetDB();
+		SetDB.resetDB(false);
 
 		// HTML Browser
 		// Document: ISC Control System:
@@ -79,8 +79,9 @@ public class STC04_CreatePanel extends STC04_CreatePanelHelper {
 		((GuiTestObject) link_logout().find()).click();
 		browser_htmlBrowser(document_iscControlSystem3(), DEFAULT_FLAGS)
 				.close();
-		
+
 		// reset the database
-		SetDB.resetDB();
+		SetDB.resetDB(false);
+
 	}
 }

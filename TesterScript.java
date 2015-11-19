@@ -30,11 +30,11 @@ public class TesterScript extends TesterScriptHelper
 	 */
 	public void testMain(Object[] args) throws Exception 
 	{
-/*
 		int index = 1;
+		
+/*		
 		while(dpString("Panelist " + index).equalsIgnoreCase("True")){
-			SetDB.registerPanelist(
-					dpInt("UserID " + index),				// user ID start at four and count up for each new panelist
+			SetDB.registerPanelist((3 + index),				// user ID start at four and count up for each new panelist
 					dpString("Fname " + index),				// first name
 					dpString("Lname " + index),				// last name
 					dpString("username " + index),			// username
@@ -55,13 +55,19 @@ public class TesterScript extends TesterScriptHelper
 		// Create panels to add panelist to
 		index = 1;
 		while(dpString("Panel " + index).equalsIgnoreCase("True")){
-			SetDB.createPanel(
-					dpInt("PanelID " +index), 
+			SetDB.createPanel((2 +index), 
 					dpString("PanelName " +index) , 
 					dpString("PanelDescription " + index++));
 		}
-*/
-		SetDB.ResetDB();
+		
+		// add panelist to panel
+		index = 1;
+		while(dpString("AddPanelist " + index).equalsIgnoreCase("True")){
+			SetDB.addPanelistToPanel((999 + index),(2 + index));
+			index++;
+		}
+*/		
+		SetDB.resetDB(false);
 	}
 }
 

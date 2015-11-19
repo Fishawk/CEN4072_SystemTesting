@@ -27,7 +27,10 @@ public class STC06_AddPanelistToPanel extends STC06_AddPanelistToPanelHelper {
 	 * @author John
 	 */
 	public void testMain(Object[] args) {
-		
+
+		// reset the database
+		SetDB.resetDB(false);
+
 		// WHo is Who
 		final boolean SUNNY = dpString("TestType").equalsIgnoreCase("Sunny");
 		final boolean RAINY1 = dpString("TestType").equalsIgnoreCase("Rainy1");
@@ -162,5 +165,9 @@ public class STC06_AddPanelistToPanel extends STC06_AddPanelistToPanelHelper {
 		// close the browser when finished
 		browser_htmlBrowser(document_iscControlSystem2(), DEFAULT_FLAGS)
 				.close();
+
+		// reset the database
+		SetDB.resetDB(false);
+
 	}
 }

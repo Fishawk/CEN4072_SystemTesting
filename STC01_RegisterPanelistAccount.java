@@ -33,7 +33,7 @@ public class STC01_RegisterPanelistAccount extends
 	public void testMain(Object[] args) {
 
 		// reset the database
-		SetDB.resetDB();
+		SetDB.resetDB(false);
 		
 		// WHo is Who
 		final boolean SUNNY = dpString("TestType").equalsIgnoreCase("Sunny");
@@ -133,7 +133,7 @@ public class STC01_RegisterPanelistAccount extends
 			browser_htmlBrowser(document_iscControlSystem(), DEFAULT_FLAGS).close();
 			
 			// Reset the Database without credentials
-			SetDB.resetDB();
+			SetDB.resetDB(false);
 		} else if (RAINY1) {
 			// Failed registration
 			browser_htmlBrowser().performTest(FailedRegistrationVP());
@@ -142,7 +142,7 @@ public class STC01_RegisterPanelistAccount extends
 			browser_htmlBrowser(document_iscControlSystem(), DEFAULT_FLAGS).close();
 			
 			// Reset the Database without credentials
-			SetDB.resetDB();
+			SetDB.resetDB(false);
 		}else if (RAINY3) {
 			// Failed registration
 			browser_htmlBrowser().performTest(FailedRegistrationVP());
@@ -151,7 +151,7 @@ public class STC01_RegisterPanelistAccount extends
 			browser_htmlBrowser(document_iscControlSystem(), DEFAULT_FLAGS).close();
 			
 			// Reset the Database with credentials 
-			SetDB.ResetDB();
+			SetDB.resetDB(true);
 		}
 
 	}

@@ -20,9 +20,9 @@ import com.ibm.rational.test.ft.object.interfaces.sapwebportal.*;
 public class STC05_SearchPanelist extends STC05_SearchPanelistHelper {
 
 	public void testMain(Object[] args) {
-		
+
 		// reset the database
-		SetDB.resetDB();
+		SetDB.resetDB(false);
 
 		// register panelist #1-6 to search
 		int index = 1;
@@ -152,6 +152,7 @@ public class STC05_SearchPanelist extends STC05_SearchPanelistHelper {
 				.close();
 
 		// reset the database
-		SetDB.resetDB();
+		SetDB.resetDB(false);
+
 	}
 }

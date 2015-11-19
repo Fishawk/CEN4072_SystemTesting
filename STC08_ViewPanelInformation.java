@@ -29,13 +29,53 @@ public class STC08_ViewPanelInformation extends STC08_ViewPanelInformationHelper
 	 */
 	public void testMain(Object[] args) 
 	{
+		//reset database
+		SetDB.resetDB(false);
 		
 		// WHo is Who
-		final boolean SUNNY = dpString("TestType").equalsIgnoreCase("Sunny");
+		final boolean SUNNY1 = dpString("TestType").equalsIgnoreCase("Sunny1");
+		final boolean SUNNY2 = dpString("TestType").equalsIgnoreCase("Sunny2");
+		final boolean SUNNY3 = dpString("TestType").equalsIgnoreCase("Sunny3");
 		final boolean RAINY1 = dpString("TestType").equalsIgnoreCase("Rainy1");
 		final boolean RAINY2 = dpString("TestType").equalsIgnoreCase("Rainy2");
 		final boolean RAINY3 = dpString("TestType").equalsIgnoreCase("Rainy3");
-
+		int index = 1;
+		
+		// set up the database
+		if(SUNNY3){
+			while(dpString("Panelist " + index).equalsIgnoreCase("True")){
+				SetDB.registerPanelist((3 + index),				// user ID start at four and count up for each new panelist
+						dpString("Fname " + index),				// first name
+						dpString("Lname " + index),				// last name
+						dpString("username " + index),			// username
+						dpString("password " + index),			// password
+						dpString("Institution " + index),		// Institution
+						dpString("Address " + index),			// Address
+						dpString("city " + index),				// City
+						dpString("State " + index),				// State
+						dpString("zip " + index),				// ZipCode
+						dpString("Telephone " + index),			// Telephone
+						dpString("Email " + index),				// Email
+						dpString("Gender " + index),			// Gender
+						dpString("Ethnicity " + index),			// Ethnicity
+						dpString("Area of expertise " + index),	// Expertise
+						dpInt("ISC ID " + index++)); 				// ISC ID 
+			}
+	
+			// Create panels to add panelist to
+			index = 1;
+			while(dpString("Panel " + index).equalsIgnoreCase("True")){
+				SetDB.createPanel((2 +index), 
+						dpString("PanelName " +index) , 
+						dpString("PanelDescription " + index++));
+			}
+			
+			// add panelist to panel
+			index = 1;
+			while(dpString("AddPanelist " + index).equalsIgnoreCase("True")){
+				SetDB.addPanelistToPanel((999 + index),(2 + index++));
+			}
+		}
 		// HTML Browser
 		// Document: ISC Control System:
 		startApp("http://localhost:8080/International_Science_Consortium/");
@@ -54,42 +94,36 @@ public class STC08_ViewPanelInformation extends STC08_ViewPanelInformationHelper
 		button_logInsubmit().click();
 		
 		
-		if(SUNNY){
+		if(SUNNY1){
 			// click display my panels link
-			link_displayMyPanels().click();
+			((GuiTestObject)link_displayMyPanels().find()).click();
 			
-		}else if (RAINY1){
+		}else if(SUNNY2){
+			// click display my panels link
+			((GuiTestObject)link_displayMyPanels().find()).click();
+		} else if(SUNNY3){
+			// click display my panels link
+			((GuiTestObject)link_displayMyPanels().find()).click();
 			
-		}else if (RAINY2){
 			
-		}else if (RAINY3){
+			((GuiTestObject)link_displayMyPanels().find()).click();
+			
+		}else if (RAINY1){ // admin logged in
+			
+		}else if (RAINY2){ // panelist logged in
+			
+		}else if (RAINY3){ // early logout
 			
 		}
-
-/*		
-		//
-		table_htmlTable_0().performTest(HtmlTable_0_gridVP());
-		link_viewPanel().click();
-		sleep(3);
-		// Document: ISC Control System: http://localhost:8080/International_Science_Consortium/displayPanel.jsp?panelID=1
-		table_htmlTable_0_2().performTest(HtmlTable_0_grid_2VP());
-		button_back(browser_htmlBrowser(document_iscControlSystem2(),DEFAULT_FLAGS),DEFAULT_FLAGS).click();
-		// Document: ISC Control System: http://localhost:8080/International_Science_Consortium/displayPanels.jsp
-		link_viewPanel2().click();
-		sleep(3);
-		// Document: ISC Control System: http://localhost:8080/International_Science_Consortium/displayPanel.jsp?panelID=1
-		table_htmlTable_0_2().performTest(HtmlTable_0_grid_3VP());
-		button_back(browser_htmlBrowser(document_iscControlSystem2(),DEFAULT_FLAGS),DEFAULT_FLAGS).click();
-		// Document: ISC Control System: http://localhost:8080/International_Science_Consortium/displayPanels.jsp
-		link_viewPanel3().click();
-		sleep(3);
-		// Document: ISC Control System: http://localhost:8080/International_Science_Consortium/displayPanel.jsp?panelID=1
-		table_htmlTable_0_2().performTest(HtmlTable_0_grid_4VP());
-		link_displayMyPanels2().click();
-		// Document: ISC Control System: http://localhost:8080/International_Science_Consortium/displayPanels.jsp
+		
+		
+		// Logout
 		((GuiTestObject)link_logout().find()).click();
-		browser_htmlBrowser(document_iscControlSystem3(),DEFAULT_FLAGS).close();
-*/
+		
+		
+		//reset database
+		SetDB.resetDB(false);
+		
 	}
 }
 

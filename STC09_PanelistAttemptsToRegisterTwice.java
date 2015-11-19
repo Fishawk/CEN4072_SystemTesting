@@ -30,7 +30,7 @@ public class STC09_PanelistAttemptsToRegisterTwice extends
 	public void testMain(Object[] args) {
 
 		// reset the database
-		SetDB.resetDB();
+		SetDB.resetDB(false);
 
 		// WHo is Who
 		final boolean SUNNY = dpString("TestType").equalsIgnoreCase("Sunny");
@@ -157,7 +157,8 @@ public class STC09_PanelistAttemptsToRegisterTwice extends
 		// Close Window
 		browser_htmlBrowser(document_iscControlSystem(), DEFAULT_FLAGS).close();
 
-		// Reset the Database
-		SetDB.resetDB();
+		// reset the database
+		SetDB.resetDB(false);
+
 	}
 }

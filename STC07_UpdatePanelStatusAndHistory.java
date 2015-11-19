@@ -29,6 +29,9 @@ public class STC07_UpdatePanelStatusAndHistory extends STC07_UpdatePanelStatusAn
 	 */
 	public void testMain(Object[] args) 
 	{
+		// reset the database
+		SetDB.resetDB(false);
+
 		// Who is Who
 		final boolean SUNNY = dpString("TestType").equalsIgnoreCase("Sunny");
 		final boolean RAINY1 = dpString("TestType").equalsIgnoreCase("Rainy1");
@@ -149,9 +152,10 @@ public class STC07_UpdatePanelStatusAndHistory extends STC07_UpdatePanelStatusAn
 		
 		// close browser
 		browser_htmlBrowser(document_iscControlSystem3(),DEFAULT_FLAGS).close();
-		
-		// reset the database to a clean slate
-		SetDB.resetDB();
+
+		// reset the database
+		SetDB.resetDB(false);
+
 	}
 }
 

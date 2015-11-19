@@ -22,7 +22,7 @@ public class STC02_Login extends STC02_LoginHelper {
 	public void testMain(Object[] args) {
 		
 		// reset the database
-		SetDB.resetDB();
+		SetDB.resetDB(false);
 
 		// HTML Browser
 		// Document: ISC Control System:
@@ -57,5 +57,8 @@ public class STC02_Login extends STC02_LoginHelper {
 		
 		// close the browser when finished
 		browser_htmlBrowser(document_iscControlSystem2(), DEFAULT_FLAGS).close();
+
+		// reset the database
+		SetDB.resetDB(false);
 	}
 }

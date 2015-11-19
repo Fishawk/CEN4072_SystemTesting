@@ -21,14 +21,14 @@ public class STC03_Logout extends STC03_LogoutHelper {
 
 	public void testMain(Object[] args) {
 
+		// reset the database
+		SetDB.resetDB(false);
+
 		boolean SUNNY = dpString("TestType").equalsIgnoreCase("Sunny");
 		boolean RAINY1 = dpString("TestType").equalsIgnoreCase("Rainy1");
 		boolean RAINY2 = dpString("TestType").equalsIgnoreCase("Rainy2");
 		boolean RAINY3 = dpString("TestType").equalsIgnoreCase("Rainy3");
 		
-		// reset the database
-		SetDB.resetDB();
-
 		// HTML Browser
 		// Document: ISC Control System:
 		// http://localhost:8080/International_Science_Consortium/
@@ -82,5 +82,9 @@ public class STC03_Logout extends STC03_LogoutHelper {
 
 		browser_htmlBrowser(document_iscControlSystem2(), DEFAULT_FLAGS)
 				.close();
+
+		// reset the database
+		SetDB.resetDB(false);
+
 	}
 }

@@ -20,11 +20,11 @@ import com.rational.test.ft.vp.IFtVerificationPoint;
 import com.ibm.rational.test.ft.object.interfaces.sapwebportal.*;
 /**
  * Script Name   : <b>STC08_ViewPanelInformation</b><br>
- * Generated     : <b>2015/11/18 11:15:06 AM</b><br>
+ * Generated     : <b>2015/11/19 10:25:35 AM</b><br>
  * Description   : Helper class for script<br>
  * Original Host : Windows 8.1 x86 6.3 <br>
  * 
- * @since  November 18, 2015
+ * @since  November 19, 2015
  * @author John
  */
 public abstract class STC08_ViewPanelInformationHelper extends RationalTestScript
@@ -128,52 +128,6 @@ public abstract class STC08_ViewPanelInformationHelper extends RationalTestScrip
 	}
 	
 	/**
-	 * ISCControlSystem: with default state.
-	 *		.title : ISC Control System
-	 * 		.class : Html.HtmlDocument
-	 * 		.url : http://localhost:8080/International_Science_Consortium/displayPanel.jsp?panelID= ...
-	 */
-	protected DocumentTestObject document_iscControlSystem2() 
-	{
-		return new DocumentTestObject(
-                        getMappedTestObject("document_iscControlSystem2"));
-	}
-	/**
-	 * ISCControlSystem: with specific test context and state.
-	 *		.title : ISC Control System
-	 * 		.class : Html.HtmlDocument
-	 * 		.url : http://localhost:8080/International_Science_Consortium/displayPanel.jsp?panelID= ...
-	 */
-	protected DocumentTestObject document_iscControlSystem2(TestObject anchor, long flags) 
-	{
-		return new DocumentTestObject(
-                        getMappedTestObject("document_iscControlSystem2"), anchor, flags);
-	}
-	
-	/**
-	 * ISCControlSystem: with default state.
-	 *		.title : ISC Control System
-	 * 		.class : Html.HtmlDocument
-	 * 		.url : http://localhost:8080/International_Science_Consortium/index.jsp
-	 */
-	protected DocumentTestObject document_iscControlSystem3() 
-	{
-		return new DocumentTestObject(
-                        getMappedTestObject("document_iscControlSystem3"));
-	}
-	/**
-	 * ISCControlSystem: with specific test context and state.
-	 *		.title : ISC Control System
-	 * 		.class : Html.HtmlDocument
-	 * 		.url : http://localhost:8080/International_Science_Consortium/index.jsp
-	 */
-	protected DocumentTestObject document_iscControlSystem3(TestObject anchor, long flags) 
-	{
-		return new DocumentTestObject(
-                        getMappedTestObject("document_iscControlSystem3"), anchor, flags);
-	}
-	
-	/**
 	 * DisplayMyPanels: with default state.
 	 *		.text : Display My Panels
 	 * 		.href : http://localhost:8080/International_Science_Consortium/displayPanels.jsp
@@ -202,37 +156,6 @@ public abstract class STC08_ViewPanelInformationHelper extends RationalTestScrip
 	{
 		return new GuiTestObject(
                         getMappedTestObject("link_displayMyPanels"), anchor, flags);
-	}
-	
-	/**
-	 * DisplayMyPanels: with default state.
-	 *		.text : Display My Panels
-	 * 		.href : http://localhost:8080/International_Science_Consortium/displayPanels.jsp
-	 * 		.id : 
-	 * 		.title : 
-	 * 		.class : Html.A
-	 * 		.name : 
-	 * 		.classIndex : 3
-	 */
-	protected GuiTestObject link_displayMyPanels2() 
-	{
-		return new GuiTestObject(
-                        getMappedTestObject("link_displayMyPanels2"));
-	}
-	/**
-	 * DisplayMyPanels: with specific test context and state.
-	 *		.text : Display My Panels
-	 * 		.href : http://localhost:8080/International_Science_Consortium/displayPanels.jsp
-	 * 		.id : 
-	 * 		.title : 
-	 * 		.class : Html.A
-	 * 		.name : 
-	 * 		.classIndex : 3
-	 */
-	protected GuiTestObject link_displayMyPanels2(TestObject anchor, long flags) 
-	{
-		return new GuiTestObject(
-                        getMappedTestObject("link_displayMyPanels2"), anchor, flags);
 	}
 	
 	/**
@@ -360,60 +283,6 @@ public abstract class STC08_ViewPanelInformationHelper extends RationalTestScrip
 	}
 	
 	/**
-	 * HtmlTable_0: with default state.
-	 *		.id : 
-	 * 		.title : 
-	 * 		.class : Html.TABLE
-	 * 		.caption : 
-	 * 		.classIndex : 0
-	 */
-	protected StatelessGuiSubitemTestObject table_htmlTable_0() 
-	{
-		return new StatelessGuiSubitemTestObject(
-                        getMappedTestObject("table_htmlTable_0"));
-	}
-	/**
-	 * HtmlTable_0: with specific test context and state.
-	 *		.id : 
-	 * 		.title : 
-	 * 		.class : Html.TABLE
-	 * 		.caption : 
-	 * 		.classIndex : 0
-	 */
-	protected StatelessGuiSubitemTestObject table_htmlTable_0(TestObject anchor, long flags) 
-	{
-		return new StatelessGuiSubitemTestObject(
-                        getMappedTestObject("table_htmlTable_0"), anchor, flags);
-	}
-	
-	/**
-	 * HtmlTable_0: with default state.
-	 *		.id : 
-	 * 		.title : 
-	 * 		.class : Html.TABLE
-	 * 		.caption : 
-	 * 		.classIndex : 0
-	 */
-	protected StatelessGuiSubitemTestObject table_htmlTable_0_2() 
-	{
-		return new StatelessGuiSubitemTestObject(
-                        getMappedTestObject("table_htmlTable_0_2"));
-	}
-	/**
-	 * HtmlTable_0: with specific test context and state.
-	 *		.id : 
-	 * 		.title : 
-	 * 		.class : Html.TABLE
-	 * 		.caption : 
-	 * 		.classIndex : 0
-	 */
-	protected StatelessGuiSubitemTestObject table_htmlTable_0_2(TestObject anchor, long flags) 
-	{
-		return new StatelessGuiSubitemTestObject(
-                        getMappedTestObject("table_htmlTable_0_2"), anchor, flags);
-	}
-	
-	/**
 	 * password: with default state.
 	 *		.id : 
 	 * 		.type : password
@@ -469,54 +338,6 @@ public abstract class STC08_ViewPanelInformationHelper extends RationalTestScrip
 	{
 		return new TextGuiTestObject(
                         getMappedTestObject("text_username"), anchor, flags);
-	}
-	
-	/**
-	 * Locate and return the verification point HtmlTable_0_grid object in the SUT.
-	 */
-	protected IFtVerificationPoint HtmlTable_0_gridVP() 
-	{
-		return vp("HtmlTable_0_grid");
-	}
-	protected IFtVerificationPoint HtmlTable_0_gridVP(TestObject anchor)
-	{
-		return vp("HtmlTable_0_grid", anchor);
-	}
-	
-	/**
-	 * Locate and return the verification point HtmlTable_0_grid_2 object in the SUT.
-	 */
-	protected IFtVerificationPoint HtmlTable_0_grid_2VP() 
-	{
-		return vp("HtmlTable_0_grid_2");
-	}
-	protected IFtVerificationPoint HtmlTable_0_grid_2VP(TestObject anchor)
-	{
-		return vp("HtmlTable_0_grid_2", anchor);
-	}
-	
-	/**
-	 * Locate and return the verification point HtmlTable_0_grid_3 object in the SUT.
-	 */
-	protected IFtVerificationPoint HtmlTable_0_grid_3VP() 
-	{
-		return vp("HtmlTable_0_grid_3");
-	}
-	protected IFtVerificationPoint HtmlTable_0_grid_3VP(TestObject anchor)
-	{
-		return vp("HtmlTable_0_grid_3", anchor);
-	}
-	
-	/**
-	 * Locate and return the verification point HtmlTable_0_grid_4 object in the SUT.
-	 */
-	protected IFtVerificationPoint HtmlTable_0_grid_4VP() 
-	{
-		return vp("HtmlTable_0_grid_4");
-	}
-	protected IFtVerificationPoint HtmlTable_0_grid_4VP(TestObject anchor)
-	{
-		return vp("HtmlTable_0_grid_4", anchor);
 	}
 	
 	
