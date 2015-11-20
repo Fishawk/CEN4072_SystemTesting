@@ -14,7 +14,7 @@ import com.rational.test.ft.vp.*;
 import com.ibm.rational.test.ft.object.interfaces.sapwebportal.*;
 /**
  * Description   : Functional Test Script
- * @author Princ_000
+ * @author John Burke
  */
 public class STC08_ViewPanelInformation extends STC08_ViewPanelInformationHelper
 {
@@ -32,50 +32,54 @@ public class STC08_ViewPanelInformation extends STC08_ViewPanelInformationHelper
 		//reset database
 		SetDB.resetDB(false);
 		
-		// WHo is Who
+		// Who is Who
 		final boolean SUNNY1 = dpString("TestType").equalsIgnoreCase("Sunny1");
 		final boolean SUNNY2 = dpString("TestType").equalsIgnoreCase("Sunny2");
 		final boolean SUNNY3 = dpString("TestType").equalsIgnoreCase("Sunny3");
 		final boolean RAINY1 = dpString("TestType").equalsIgnoreCase("Rainy1");
 		final boolean RAINY2 = dpString("TestType").equalsIgnoreCase("Rainy2");
 		final boolean RAINY3 = dpString("TestType").equalsIgnoreCase("Rainy3");
-		int index = 1;
 		
 		// set up the database
-		if(SUNNY3){
-			while(dpString("Panelist " + index).equalsIgnoreCase("True")){
-				SetDB.registerPanelist((3 + index),				// user ID start at four and count up for each new panelist
-						dpString("Fname " + index),				// first name
-						dpString("Lname " + index),				// last name
-						dpString("username " + index),			// username
-						dpString("password " + index),			// password
-						dpString("Institution " + index),		// Institution
-						dpString("Address " + index),			// Address
-						dpString("city " + index),				// City
-						dpString("State " + index),				// State
-						dpString("zip " + index),				// ZipCode
-						dpString("Telephone " + index),			// Telephone
-						dpString("Email " + index),				// Email
-						dpString("Gender " + index),			// Gender
-						dpString("Ethnicity " + index),			// Ethnicity
-						dpString("Area of expertise " + index),	// Expertise
-						dpInt("ISC ID " + index++)); 				// ISC ID 
-			}
-	
-			// Create panels to add panelist to
-			index = 1;
-			while(dpString("Panel " + index).equalsIgnoreCase("True")){
-				SetDB.createPanel((2 +index), 
-						dpString("PanelName " +index) , 
-						dpString("PanelDescription " + index++));
-			}
-			
-			// add panelist to panel
-			index = 1;
-			while(dpString("AddPanelist " + index).equalsIgnoreCase("True")){
-				SetDB.addPanelistToPanel((999 + index),(2 + index++));
-			}
+		
+		// the index is to control the panelist, panels 
+		// and panelist add to the panels for testing
+		int index = 1;
+		
+		// add panelist to add to panels
+		while(dpString("Panelist " + index).equalsIgnoreCase("True")){
+			SetDB.registerPanelist((3 + index),				// user ID start at '4'
+					dpString("Fname " + index),				// first name
+					dpString("Lname " + index),				// last name
+					dpString("Username " + index),			// user name
+					dpString("Password " + index),			// password
+					dpString("Institution " + index),		// Institution
+					dpString("Address " + index),			// Address
+					dpString("City " + index),				// City
+					dpString("State " + index),				// State
+					dpString("Zip " + index),				// ZipCode
+					dpString("Telephone " + index),			// Telephone
+					dpString("Email " + index),				// Email
+					dpString("Gender " + index),			// Gender
+					dpString("Ethnicity " + index),			// Ethnicity
+					dpString("Area of expertise " + index),	// Expertise
+					dpInt("ISC ID " + index++)); 			// ISC ID 
 		}
+
+		// Create panels to add panelist to
+		index = 1;
+		while(dpString("Panel " + index).equalsIgnoreCase("True")){
+			SetDB.createPanel((2 +index), 
+					dpString("PanelName " +index) , 
+					dpString("PanelDescription " + index++));
+		}
+		
+		// Add panelist to panel
+		index = 1;
+		while(dpString("AddPanelist " + index).equalsIgnoreCase("True")){
+			SetDB.addPanelistToPanel((999 + index),(2 + index++));
+		}
+		
 		// HTML Browser
 		// Document: ISC Control System:
 		startApp("http://localhost:8080/International_Science_Consortium/");
@@ -83,12 +87,12 @@ public class STC08_ViewPanelInformation extends STC08_ViewPanelInformationHelper
 		// find and enter user name
 		((TextGuiTestObject)text_username().find()).click();
 		browser_htmlBrowser(document_iscControlSystem(),DEFAULT_FLAGS)
-			.inputChars(dpString("username"));
+			.inputChars(dpString("Login"));
 		
 		// Find and enter password
 		((TextGuiTestObject)text_password().find()).click();
 		browser_htmlBrowser(document_iscControlSystem(),DEFAULT_FLAGS)
-			.inputChars(dpString("password"));
+			.inputChars(dpString("Login"));
 		
 		// Click login button
 		button_logInsubmit().click();
@@ -97,33 +101,78 @@ public class STC08_ViewPanelInformation extends STC08_ViewPanelInformationHelper
 		if(SUNNY1){
 			// click display my panels link
 			((GuiTestObject)link_displayMyPanels().find()).click();
+		
+			// Click view panel #1
+			((GuiTestObject)link_viewPanel().find()).click();
+			
+			// Verification point #1
+			browser_htmlBrowser().performTest(Sunny1ViewPanleInformationBrowserVP());
+			
+			// Verification point #2
+			table_htmlTable_1().performTest(Sunny1ViewPanleInformationHtmlTableVP());
 			
 		}else if(SUNNY2){
 			// click display my panels link
 			((GuiTestObject)link_displayMyPanels().find()).click();
+			
+			((GuiTestObject)link_viewPanel2().find()).click();
+			
+			// Verification point #1
+			browser_htmlBrowser().performTest(Sunny2ViewPanleInformationBrowserVP());
+			
+			// Verification point #2
+			table_htmlTable_1().performTest(Sunny2ViewPanleInformationHtmlTableVP());
 		} else if(SUNNY3){
 			// click display my panels link
 			((GuiTestObject)link_displayMyPanels().find()).click();
+
+			((GuiTestObject)link_viewPanel3().find()).click();
 			
+			// Verification point #1
+			browser_htmlBrowser().performTest(Sunny3ViewPanleInformationBrowserVP());
 			
-			((GuiTestObject)link_displayMyPanels().find()).click();
+			// Verification point #2
+			table_htmlTable_1().performTest(Sunny3ViewPanleInformationHtmlTableVP());
 			
 		}else if (RAINY1){ // admin logged in
 			
+			// Verification point #1
+			browser_htmlBrowser().performTest(Rainy1ViewPanleInformationhtmlBrowserVP());
+			
+			// Verification point #2
+			table_htmlTable_0().performTest(Rainy1ViewPanleInformationHtmlTableVP());
+			
 		}else if (RAINY2){ // panelist logged in
 			
+			// Verification point #1
+			browser_htmlBrowser().performTest(Rainy2ViewPanleInformationhtmlBrowserVP());
+			
+			// Verification point #2
+			table_htmlTable_0().performTest(Rainy2ViewPanleInformationHtmlTableVP());
+			
 		}else if (RAINY3){ // early logout
+
+			// Verification point #1
+			browser_htmlBrowser().performTest(htmlBrowser_standardVP());
+			
+			// Verification point #2
+			table_htmlTable_0().performTest(Rainy3ViewPanleInformationHtmlTable1VP());
 			
 		}
-		
 		
 		// Logout
 		((GuiTestObject)link_logout().find()).click();
 		
+		if(RAINY3){ // last verification point for rainy 3
+			// Verification point #3
+			browser_htmlBrowser().performTest(Rainy3ViewPanleInformationhtmlBrowserVP());
+		}
+		
+		// close browser
+		browser_htmlBrowser(document_iscControlSystem(), DEFAULT_FLAGS).close();
 		
 		//reset database
 		SetDB.resetDB(false);
-		
 	}
 }
 

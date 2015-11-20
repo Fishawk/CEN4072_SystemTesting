@@ -73,12 +73,12 @@ public class STC06_AddPanelistToPanel extends STC06_AddPanelistToPanelHelper {
 		// Employee Login user name
 		((TextGuiTestObject) text_username().find()).click();
 		browser_htmlBrowser(document_iscControlSystem(), DEFAULT_FLAGS)
-				.inputChars(dpString("EUsername"));
+				.inputChars(dpString("Login"));
 
 		// Employee login password
 		((TextGuiTestObject) text_password().find()).click();
 		browser_htmlBrowser(document_iscControlSystem(), DEFAULT_FLAGS)
-				.inputChars(dpString("Epassword"));
+				.inputChars(dpString("Login"));
 
 		// click login button
 		button_logInsubmit().click();

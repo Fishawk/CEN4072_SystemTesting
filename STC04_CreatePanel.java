@@ -30,6 +30,10 @@ public class STC04_CreatePanel extends STC04_CreatePanelHelper {
 
 		// reset the database
 		SetDB.resetDB(false);
+		
+		// WHo is Who
+		final boolean SUNNY = dpString("TestType").equalsIgnoreCase("Sunny");
+		final boolean RAINY = dpString("TestType").equalsIgnoreCase("Rainy");
 
 		// HTML Browser
 		// Document: ISC Control System:
@@ -39,12 +43,12 @@ public class STC04_CreatePanel extends STC04_CreatePanelHelper {
 		// find and enter username
 		((TextGuiTestObject) text_username().find()).click();
 		browser_htmlBrowser(document_iscControlSystem(), DEFAULT_FLAGS)
-				.inputKeys(dpString("Username"));
+				.inputKeys(dpString("Login"));
 		
 		// Find and enter password
 		((TextGuiTestObject) text_password().find()).click();
 		browser_htmlBrowser(document_iscControlSystem(), DEFAULT_FLAGS)
-				.inputChars(dpString("Password"));
+				.inputChars(dpString("Login"));
 		button_logInsubmit().click();
 
 		// Click create panel
@@ -64,21 +68,20 @@ public class STC04_CreatePanel extends STC04_CreatePanelHelper {
 		((GuiTestObject) button_createsubmit().find()).click();
 
 		// Verification point
-		if (dpString("TestType").equalsIgnoreCase("Sunny")) {
+		if (SUNNY) {
 			//successful verification
-			//((GuiTestObject) browser_htmlBrowser().find())
-			//		.performTest(PanelMadeVP());
 			browser_htmlBrowser().performTest(PanelMadeVP());
-		} else {
+			
+		} else if(RAINY){
 			// Failed verification 
 			browser_htmlBrowser().performTest(FailedCreatePanelVP());
 		}
 
-		// Document: ISC Control System:
-		// http://localhost:8080/International_Science_Consortium/messagePage?messageCode=You%20are%20now%20logged%20in.%20Welcome.
+		// Logout 
 		((GuiTestObject) link_logout().find()).click();
-		browser_htmlBrowser(document_iscControlSystem3(), DEFAULT_FLAGS)
-				.close();
+		
+		// Close Browser
+		browser_htmlBrowser(document_iscControlSystem3(), DEFAULT_FLAGS).close();
 
 		// reset the database
 		SetDB.resetDB(false);

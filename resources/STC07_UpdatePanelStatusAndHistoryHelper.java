@@ -20,11 +20,11 @@ import com.rational.test.ft.vp.IFtVerificationPoint;
 import com.ibm.rational.test.ft.object.interfaces.sapwebportal.*;
 /**
  * Script Name   : <b>STC07_UpdatePanelStatusAndHistory</b><br>
- * Generated     : <b>2015/11/19 12:09:24 AM</b><br>
+ * Generated     : <b>2015/11/20 2:34:47 PM</b><br>
  * Description   : Helper class for script<br>
  * Original Host : Windows 8.1 x86 6.3 <br>
  * 
- * @since  November 19, 2015
+ * @since  November 20, 2015
  * @author John
  */
 public abstract class STC07_UpdatePanelStatusAndHistoryHelper extends RationalTestScript
@@ -217,8 +217,8 @@ public abstract class STC07_UpdatePanelStatusAndHistoryHelper extends RationalTe
 	/**
 	 * DisplayMyPanels: with default state.
 	 *		.text : Display My Panels
-	 * 		.id : 
 	 * 		.href : http://localhost:8080/International_Science_Consortium/displayPanels.jsp
+	 * 		.id : 
 	 * 		.title : 
 	 * 		.class : Html.A
 	 * 		.name : 
@@ -232,8 +232,8 @@ public abstract class STC07_UpdatePanelStatusAndHistoryHelper extends RationalTe
 	/**
 	 * DisplayMyPanels: with specific test context and state.
 	 *		.text : Display My Panels
-	 * 		.id : 
 	 * 		.href : http://localhost:8080/International_Science_Consortium/displayPanels.jsp
+	 * 		.id : 
 	 * 		.title : 
 	 * 		.class : Html.A
 	 * 		.name : 
@@ -248,8 +248,8 @@ public abstract class STC07_UpdatePanelStatusAndHistoryHelper extends RationalTe
 	/**
 	 * Logout: with default state.
 	 *		.text : Logout
-	 * 		.id : 
 	 * 		.href : http://localhost:8080/International_Science_Consortium/logout
+	 * 		.id : 
 	 * 		.title : 
 	 * 		.class : Html.A
 	 * 		.name : 
@@ -263,8 +263,8 @@ public abstract class STC07_UpdatePanelStatusAndHistoryHelper extends RationalTe
 	/**
 	 * Logout: with specific test context and state.
 	 *		.text : Logout
-	 * 		.id : 
 	 * 		.href : http://localhost:8080/International_Science_Consortium/logout
+	 * 		.id : 
 	 * 		.title : 
 	 * 		.class : Html.A
 	 * 		.name : 
@@ -279,8 +279,8 @@ public abstract class STC07_UpdatePanelStatusAndHistoryHelper extends RationalTe
 	/**
 	 * ViewPanel: with default state.
 	 *		.text : View Panel
-	 * 		.id : 
 	 * 		.href : http://localhost:8080/International_Science_Consortium/displayPanel.jsp?panelID= ...
+	 * 		.id : 
 	 * 		.title : 
 	 * 		.class : Html.A
 	 * 		.name : 
@@ -294,8 +294,8 @@ public abstract class STC07_UpdatePanelStatusAndHistoryHelper extends RationalTe
 	/**
 	 * ViewPanel: with specific test context and state.
 	 *		.text : View Panel
-	 * 		.id : 
 	 * 		.href : http://localhost:8080/International_Science_Consortium/displayPanel.jsp?panelID= ...
+	 * 		.id : 
 	 * 		.title : 
 	 * 		.class : Html.A
 	 * 		.name : 
@@ -551,15 +551,27 @@ public abstract class STC07_UpdatePanelStatusAndHistoryHelper extends RationalTe
 	}
 	
 	/**
-	 * Locate and return the verification point Rainy3UpdatePanelStatusAndHistory object in the SUT.
+	 * Locate and return the verification point Rainy3UpdatePanelStatusAndHistoryBrowser object in the SUT.
 	 */
-	protected IFtVerificationPoint Rainy3UpdatePanelStatusAndHistoryVP() 
+	protected IFtVerificationPoint Rainy3UpdatePanelStatusAndHistoryBrowserVP() 
 	{
-		return vp("Rainy3UpdatePanelStatusAndHistory");
+		return vp("Rainy3UpdatePanelStatusAndHistoryBrowser");
 	}
-	protected IFtVerificationPoint Rainy3UpdatePanelStatusAndHistoryVP(TestObject anchor)
+	protected IFtVerificationPoint Rainy3UpdatePanelStatusAndHistoryBrowserVP(TestObject anchor)
 	{
-		return vp("Rainy3UpdatePanelStatusAndHistory", anchor);
+		return vp("Rainy3UpdatePanelStatusAndHistoryBrowser", anchor);
+	}
+	
+	/**
+	 * Locate and return the verification point Rainy3UpdatePanelStatusAndHistoryHtmlTable object in the SUT.
+	 */
+	protected IFtVerificationPoint Rainy3UpdatePanelStatusAndHistoryHtmlTableVP() 
+	{
+		return vp("Rainy3UpdatePanelStatusAndHistoryHtmlTable");
+	}
+	protected IFtVerificationPoint Rainy3UpdatePanelStatusAndHistoryHtmlTableVP(TestObject anchor)
+	{
+		return vp("Rainy3UpdatePanelStatusAndHistoryHtmlTable", anchor);
 	}
 	
 	/**

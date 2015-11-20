@@ -42,13 +42,13 @@ public class STC09_PanelistAttemptsToRegisterTwice extends
 			SetDB.registerPanelist((3 + index), 			// user ID start at '4'
 					dpString("Fname " + index), 			// first name
 					dpString("Lname " + index), 			// last name
-					dpString("username " + index), 			// user name
-					dpString("password " + index), 			// password
+					dpString("Username " + index), 			// user name
+					dpString("Password " + index), 			// password
 					dpString("Institution " + index), 		// Institution
 					dpString("Address " + index), 			// Address
-					dpString("city " + index), 				// City
+					dpString("City " + index), 				// City
 					dpString("State " + index), 			// State
-					dpString("zip " + index), 				// ZipCode
+					dpString("Zip " + index), 				// ZipCode
 					dpString("Telephone " + index), 		// Telephone
 					dpString("Email " + index), 			// Email
 					dpString("Gender " + index), 			// Gender

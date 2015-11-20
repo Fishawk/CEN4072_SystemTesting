@@ -38,12 +38,12 @@ public class STC03_Logout extends STC03_LogoutHelper {
 		// Find and enter username
 		((TextGuiTestObject) text_username().find()).click();
 		browser_htmlBrowser(document_iscControlSystem(), DEFAULT_FLAGS)
-				.inputChars(dpString("username"));
+				.inputChars(dpString("Login"));
 		
 		// find and enter password
 		((TextGuiTestObject) text_password().find()).click();
 		browser_htmlBrowser(document_iscControlSystem(), DEFAULT_FLAGS)
-				.inputKeys(dpString("password"));
+				.inputKeys(dpString("Login"));
 		
 		// log user in
 		button_logInsubmit().click();

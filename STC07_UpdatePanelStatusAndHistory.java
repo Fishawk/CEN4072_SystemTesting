@@ -45,12 +45,12 @@ public class STC07_UpdatePanelStatusAndHistory extends STC07_UpdatePanelStatusAn
 		// find and enter user name
 		((TextGuiTestObject)text_username().find()).click();
 		browser_htmlBrowser(document_iscControlSystem(),DEFAULT_FLAGS)
-			.inputChars(dpString("Username"));
+			.inputChars(dpString("Login"));
 		
 		// find and enter password
 		((TextGuiTestObject)text_password().find()).click();
 		browser_htmlBrowser(document_iscControlSystem(),DEFAULT_FLAGS)
-			.inputChars(dpString("Password"));
+			.inputChars(dpString("Login"));
 		
 		// click login button
 		button_logInsubmit().click();
@@ -113,8 +113,15 @@ public class STC07_UpdatePanelStatusAndHistory extends STC07_UpdatePanelStatusAn
 			// click view panels link
 			((GuiTestObject)link_viewPanel().find()).click();
 			
+		
+			// Verification point #1
+			browser_htmlBrowser().performTest(Rainy3UpdatePanelStatusAndHistoryBrowserVP());
+			// Verification point #2
+			table_htmlTable_1_2().performTest(Rainy3UpdatePanelStatusAndHistoryHtmlTableVP());
+			
+			
 			// HTML Browser
-			table_htmlTable_1_2().performTest(Rainy3UpdatePanelStatusAndHistoryVP());
+			//table_htmlTable_1_2().performTest(Rainy3UpdatePanelStatusAndHistoryVP());
 			
 			// close browser
 			browser_htmlBrowser(document_iscControlSystem3(),DEFAULT_FLAGS).close();
@@ -123,30 +130,16 @@ public class STC07_UpdatePanelStatusAndHistory extends STC07_UpdatePanelStatusAn
 			// Document: ISC Control System: 
 			startApp("http://localhost:8080/International_Science_Consortium/");
 			
-			// find and enter user name
-			((TextGuiTestObject)text_username().find()).click();
-			browser_htmlBrowser(document_iscControlSystem(),DEFAULT_FLAGS)
-				.inputChars(dpString("Username"));
-			
-			// find and enter password
-			((TextGuiTestObject)text_password().find()).click();
-			browser_htmlBrowser(document_iscControlSystem(),DEFAULT_FLAGS)
-				.inputChars(dpString("Password"));
-			
-			// click login button
-			button_logInsubmit().click();
-			
 			// click display my panels link
 			((GuiTestObject)link_displayMyPanels().find()).click();
 
 			// click view panels link
 			((GuiTestObject)link_viewPanel().find()).click();
 			
-			// HTML Browser
-			table_htmlTable_1_2().performTest(Rainy3UpdatePanelStatusAndHistoryVP());
-			
-			//verify information straight from database
-			table_htmlTable_1_2().performTest(Rainy3UpdatePanelStatusAndHistoryVP());
+			// Verification point #1
+			browser_htmlBrowser().performTest(Rainy3UpdatePanelStatusAndHistoryBrowserVP());
+			// Verification point #2
+			table_htmlTable_1_2().performTest(Rainy3UpdatePanelStatusAndHistoryHtmlTableVP());
 			
 		}
 		

@@ -20,11 +20,11 @@ import com.rational.test.ft.vp.IFtVerificationPoint;
 import com.ibm.rational.test.ft.object.interfaces.sapwebportal.*;
 /**
  * Script Name   : <b>STC08_ViewPanelInformation</b><br>
- * Generated     : <b>2015/11/19 10:25:35 AM</b><br>
+ * Generated     : <b>2015/11/20 3:38:08 PM</b><br>
  * Description   : Helper class for script<br>
  * Original Host : Windows 8.1 x86 6.3 <br>
  * 
- * @since  November 19, 2015
+ * @since  November 20, 2015
  * @author John
  */
 public abstract class STC08_ViewPanelInformationHelper extends RationalTestScript
@@ -283,6 +283,60 @@ public abstract class STC08_ViewPanelInformationHelper extends RationalTestScrip
 	}
 	
 	/**
+	 * HtmlTable_0: with default state.
+	 *		.id : 
+	 * 		.title : 
+	 * 		.class : Html.TABLE
+	 * 		.caption : 
+	 * 		.classIndex : 0
+	 */
+	protected StatelessGuiSubitemTestObject table_htmlTable_0() 
+	{
+		return new StatelessGuiSubitemTestObject(
+                        getMappedTestObject("table_htmlTable_0"));
+	}
+	/**
+	 * HtmlTable_0: with specific test context and state.
+	 *		.id : 
+	 * 		.title : 
+	 * 		.class : Html.TABLE
+	 * 		.caption : 
+	 * 		.classIndex : 0
+	 */
+	protected StatelessGuiSubitemTestObject table_htmlTable_0(TestObject anchor, long flags) 
+	{
+		return new StatelessGuiSubitemTestObject(
+                        getMappedTestObject("table_htmlTable_0"), anchor, flags);
+	}
+	
+	/**
+	 * HtmlTable_1: with default state.
+	 *		.id : 
+	 * 		.title : 
+	 * 		.class : Html.TABLE
+	 * 		.caption : 
+	 * 		.classIndex : 1
+	 */
+	protected StatelessGuiSubitemTestObject table_htmlTable_1() 
+	{
+		return new StatelessGuiSubitemTestObject(
+                        getMappedTestObject("table_htmlTable_1"));
+	}
+	/**
+	 * HtmlTable_1: with specific test context and state.
+	 *		.id : 
+	 * 		.title : 
+	 * 		.class : Html.TABLE
+	 * 		.caption : 
+	 * 		.classIndex : 1
+	 */
+	protected StatelessGuiSubitemTestObject table_htmlTable_1(TestObject anchor, long flags) 
+	{
+		return new StatelessGuiSubitemTestObject(
+                        getMappedTestObject("table_htmlTable_1"), anchor, flags);
+	}
+	
+	/**
 	 * password: with default state.
 	 *		.id : 
 	 * 		.type : password
@@ -338,6 +392,162 @@ public abstract class STC08_ViewPanelInformationHelper extends RationalTestScrip
 	{
 		return new TextGuiTestObject(
                         getMappedTestObject("text_username"), anchor, flags);
+	}
+	
+	/**
+	 * Locate and return the verification point htmlBrowser_standard object in the SUT.
+	 */
+	protected IFtVerificationPoint htmlBrowser_standardVP() 
+	{
+		return vp("htmlBrowser_standard");
+	}
+	protected IFtVerificationPoint htmlBrowser_standardVP(TestObject anchor)
+	{
+		return vp("htmlBrowser_standard", anchor);
+	}
+	
+	/**
+	 * Locate and return the verification point Rainy1ViewPanleInformationhtmlBrowser object in the SUT.
+	 */
+	protected IFtVerificationPoint Rainy1ViewPanleInformationhtmlBrowserVP() 
+	{
+		return vp("Rainy1ViewPanleInformationhtmlBrowser");
+	}
+	protected IFtVerificationPoint Rainy1ViewPanleInformationhtmlBrowserVP(TestObject anchor)
+	{
+		return vp("Rainy1ViewPanleInformationhtmlBrowser", anchor);
+	}
+	
+	/**
+	 * Locate and return the verification point Rainy1ViewPanleInformationHtmlTable object in the SUT.
+	 */
+	protected IFtVerificationPoint Rainy1ViewPanleInformationHtmlTableVP() 
+	{
+		return vp("Rainy1ViewPanleInformationHtmlTable");
+	}
+	protected IFtVerificationPoint Rainy1ViewPanleInformationHtmlTableVP(TestObject anchor)
+	{
+		return vp("Rainy1ViewPanleInformationHtmlTable", anchor);
+	}
+	
+	/**
+	 * Locate and return the verification point Rainy2ViewPanleInformationhtmlBrowser object in the SUT.
+	 */
+	protected IFtVerificationPoint Rainy2ViewPanleInformationhtmlBrowserVP() 
+	{
+		return vp("Rainy2ViewPanleInformationhtmlBrowser");
+	}
+	protected IFtVerificationPoint Rainy2ViewPanleInformationhtmlBrowserVP(TestObject anchor)
+	{
+		return vp("Rainy2ViewPanleInformationhtmlBrowser", anchor);
+	}
+	
+	/**
+	 * Locate and return the verification point Rainy2ViewPanleInformationHtmlTable object in the SUT.
+	 */
+	protected IFtVerificationPoint Rainy2ViewPanleInformationHtmlTableVP() 
+	{
+		return vp("Rainy2ViewPanleInformationHtmlTable");
+	}
+	protected IFtVerificationPoint Rainy2ViewPanleInformationHtmlTableVP(TestObject anchor)
+	{
+		return vp("Rainy2ViewPanleInformationHtmlTable", anchor);
+	}
+	
+	/**
+	 * Locate and return the verification point Rainy3ViewPanleInformationhtmlBrowser object in the SUT.
+	 */
+	protected IFtVerificationPoint Rainy3ViewPanleInformationhtmlBrowserVP() 
+	{
+		return vp("Rainy3ViewPanleInformationhtmlBrowser");
+	}
+	protected IFtVerificationPoint Rainy3ViewPanleInformationhtmlBrowserVP(TestObject anchor)
+	{
+		return vp("Rainy3ViewPanleInformationhtmlBrowser", anchor);
+	}
+	
+	/**
+	 * Locate and return the verification point Rainy3ViewPanleInformationHtmlTable1 object in the SUT.
+	 */
+	protected IFtVerificationPoint Rainy3ViewPanleInformationHtmlTable1VP() 
+	{
+		return vp("Rainy3ViewPanleInformationHtmlTable1");
+	}
+	protected IFtVerificationPoint Rainy3ViewPanleInformationHtmlTable1VP(TestObject anchor)
+	{
+		return vp("Rainy3ViewPanleInformationHtmlTable1", anchor);
+	}
+	
+	/**
+	 * Locate and return the verification point Sunny1ViewPanleInformationBrowser object in the SUT.
+	 */
+	protected IFtVerificationPoint Sunny1ViewPanleInformationBrowserVP() 
+	{
+		return vp("Sunny1ViewPanleInformationBrowser");
+	}
+	protected IFtVerificationPoint Sunny1ViewPanleInformationBrowserVP(TestObject anchor)
+	{
+		return vp("Sunny1ViewPanleInformationBrowser", anchor);
+	}
+	
+	/**
+	 * Locate and return the verification point Sunny1ViewPanleInformationHtmlTable object in the SUT.
+	 */
+	protected IFtVerificationPoint Sunny1ViewPanleInformationHtmlTableVP() 
+	{
+		return vp("Sunny1ViewPanleInformationHtmlTable");
+	}
+	protected IFtVerificationPoint Sunny1ViewPanleInformationHtmlTableVP(TestObject anchor)
+	{
+		return vp("Sunny1ViewPanleInformationHtmlTable", anchor);
+	}
+	
+	/**
+	 * Locate and return the verification point Sunny2ViewPanleInformationBrowser object in the SUT.
+	 */
+	protected IFtVerificationPoint Sunny2ViewPanleInformationBrowserVP() 
+	{
+		return vp("Sunny2ViewPanleInformationBrowser");
+	}
+	protected IFtVerificationPoint Sunny2ViewPanleInformationBrowserVP(TestObject anchor)
+	{
+		return vp("Sunny2ViewPanleInformationBrowser", anchor);
+	}
+	
+	/**
+	 * Locate and return the verification point Sunny2ViewPanleInformationHtmlTable object in the SUT.
+	 */
+	protected IFtVerificationPoint Sunny2ViewPanleInformationHtmlTableVP() 
+	{
+		return vp("Sunny2ViewPanleInformationHtmlTable");
+	}
+	protected IFtVerificationPoint Sunny2ViewPanleInformationHtmlTableVP(TestObject anchor)
+	{
+		return vp("Sunny2ViewPanleInformationHtmlTable", anchor);
+	}
+	
+	/**
+	 * Locate and return the verification point Sunny3ViewPanleInformationBrowser object in the SUT.
+	 */
+	protected IFtVerificationPoint Sunny3ViewPanleInformationBrowserVP() 
+	{
+		return vp("Sunny3ViewPanleInformationBrowser");
+	}
+	protected IFtVerificationPoint Sunny3ViewPanleInformationBrowserVP(TestObject anchor)
+	{
+		return vp("Sunny3ViewPanleInformationBrowser", anchor);
+	}
+	
+	/**
+	 * Locate and return the verification point Sunny3ViewPanleInformationHtmlTable object in the SUT.
+	 */
+	protected IFtVerificationPoint Sunny3ViewPanleInformationHtmlTableVP() 
+	{
+		return vp("Sunny3ViewPanleInformationHtmlTable");
+	}
+	protected IFtVerificationPoint Sunny3ViewPanleInformationHtmlTableVP(TestObject anchor)
+	{
+		return vp("Sunny3ViewPanleInformationHtmlTable", anchor);
 	}
 	
 	

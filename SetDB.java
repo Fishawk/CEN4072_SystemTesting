@@ -117,6 +117,7 @@ public class SetDB extends SetDBHelper {
 			stmt.executeUpdate(build.toString());
 			build = new StringBuilder();
 
+			// find panelist expertise and enter it into the panelist expertise data panel
 			build.append("INSERT INTO panelistexpertise (pid, expertiseid)");
 			build.append("	VALUES ("+ISCID+", "+ (
 					expertise.equalsIgnoreCase("Computer Science")?1:
@@ -147,8 +148,12 @@ public class SetDB extends SetDBHelper {
 	 * 
 	 * KEY FACTORS: ***  When creating a new panel or panels, you need to start
 	 * the PanelID = 3 and increment by one for each additional panel
+	 * 
+	 * @param int panelID
+	 * @param String name (panel name)
+	 * @param String description (panel description)
 	 */
-	public static void createPanel(int PanelID, String Name, String Description) {
+	public static void createPanel(int panelID, String name, String description) {
 
 		StringBuilder build = new StringBuilder();
 
@@ -171,23 +176,25 @@ public class SetDB extends SetDBHelper {
 			// Reference PanelContainer.createPanel(...)
 			build.append("INSERT INTO panel(PanelID, Name, Description)");
 			build.append("	VALUES");
-			build.append("		("+PanelID+", '"+Name+"', '"+Description+"');");
+			build.append("		("+panelID+", '"+name+"', '"+description+"');");
 
 			// Fill fields of table and clear StringBuilder
 			stmt.executeUpdate(build.toString());
 			build = new StringBuilder();
 
+			// build input for panel history in Database
 			build.append("INSERT INTO panelhistory (PanelID, PanelStatus, Comments)");
 			build.append("	VALUES");
-			build.append("		("+PanelID+", 'In Progress', 'Panel Created');");
+			build.append("		("+panelID+", 'In Progress', 'Panel Created');");
 
 			// Fill fields of table and clear StringBuilder
 			stmt.executeUpdate(build.toString());
 			build = new StringBuilder();
 
+			// Build input for panel access in Database
 			build.append("INSERT INTO panelaccess (EmployeeID, PanelID)");
 			build.append("	VALUES");
-			build.append("		(1, "+PanelID+");");
+			build.append("		(1, "+panelID+");");
 
 			// Fill fields of table and clear StringBuilder
 			stmt.executeUpdate(build.toString());
@@ -213,8 +220,11 @@ public class SetDB extends SetDBHelper {
 	 * KEY FACTORS: ***  when adding a panelist to a panel, you must have the 
 	 * panelist id which is between 1000-1005 and the panel ID which would be 
 	 * one through the last panel YOU created.
+	 * 
+	 * @param int panelistID
+	 * @param int panelID
 	 */
-	public static void addPanelistToPanel(int PanelistID, int PanelID) {
+	public static void addPanelistToPanel(int panelistID, int panelID) {
 
 		StringBuilder build = new StringBuilder();
 
@@ -236,7 +246,7 @@ public class SetDB extends SetDBHelper {
 			// Add Panelist to Panel
 			stmt.execute("SELECT 'Add Panelist to Panel...' AS '';");
 			build.append("INSERT INTO servingpanelists (PanelistID, PanelID)");
-			build.append("	VALUES ("+PanelistID+", "+PanelID+");");
+			build.append("	VALUES ("+panelistID+", "+panelID+");");
 
 			// Fill fields of table and clear StringBuilder
 			stmt.execute(build.toString());
@@ -258,7 +268,8 @@ public class SetDB extends SetDBHelper {
 	 * This method resets the database to a clean slate.
 	 * IFF a test case within a script crashes the database set the mode to true 
 	 * ELSE set to false
-	 * @param mode
+	 * 
+	 * @param boolean mode
 	 */
 	public static void resetDB(boolean mode) {
 
@@ -277,12 +288,16 @@ public class SetDB extends SetDBHelper {
 			connection = DriverManager.getConnection(connectionUrl);
 			Statement stmt = connection.createStatement();
 
+			// if for some reason the server crashes because of bad input into the 
+			// data base the administration credentials are needed 
+			// Example: null panelist ID or a panelist ID not in the database will 
+			// require the administration credentials
 			if(mode){
-			stmt.execute("SELECT 'CREATE USER \'admin\'@\'localhost\' and GRANT PRIVELEGES' AS '';");
-			stmt.execute("DROP USER 'admin'@'localhost';");
-			stmt.execute("CREATE USER 'admin'@'localhost' IDENTIFIED BY 'cen4010';");
-			stmt.execute("GRANT ALL PRIVILEGES ON mydb.* TO 'admin'@'localhost';");
-			stmt.execute("FLUSH PRIVILEGES;");
+				stmt.execute("SELECT 'CREATE USER \'admin\'@\'localhost\' and GRANT PRIVELEGES' AS '';");
+				stmt.execute("DROP USER 'admin'@'localhost';");
+				stmt.execute("CREATE USER 'admin'@'localhost' IDENTIFIED BY 'cen4010';");
+				stmt.execute("GRANT ALL PRIVILEGES ON mydb.* TO 'admin'@'localhost';");
+				stmt.execute("FLUSH PRIVILEGES;");
 			}
 			/*****************************************************************************
 			 * Create `mydb` Database Reference Storage.Repository.DBConnection

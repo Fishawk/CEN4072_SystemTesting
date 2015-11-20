@@ -55,12 +55,12 @@ public class STC05_SearchPanelist extends STC05_SearchPanelistHelper {
 		// Find and enter employee username
 		((GuiTestObject) text_username().find()).click();
 		browser_htmlBrowser(document_iscControlSystem(), DEFAULT_FLAGS)
-				.inputChars(dpString("EUsername"));
+				.inputChars(dpString("Login"));
 
 		// Find and enter employee password
 		((GuiTestObject) text_password().find()).click();
 		browser_htmlBrowser(document_iscControlSystem(), DEFAULT_FLAGS)
-				.inputChars(dpString("EPassword"));
+				.inputChars(dpString("Login"));
 
 		// click login button
 		button_logInsubmit().click();
