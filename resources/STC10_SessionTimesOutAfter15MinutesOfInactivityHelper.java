@@ -19,15 +19,15 @@ import com.rational.test.ft.script.*;
 import com.rational.test.ft.vp.IFtVerificationPoint;
 import com.ibm.rational.test.ft.object.interfaces.sapwebportal.*;
 /**
- * Script Name   : <b>STC10_SessionTimesOutAfter15MinutesInactivityRainy02</b><br>
- * Generated     : <b>2015/10/19 4:10:53 PM</b><br>
+ * Script Name   : <b>STC10_SessionTimesOutAfter15MinutesOfInactivity</b><br>
+ * Generated     : <b>2015/11/22 12:15:29 PM</b><br>
  * Description   : Helper class for script<br>
  * Original Host : Windows 8.1 x86 6.3 <br>
  * 
- * @since  October 19, 2015
- * @author Princ_000
+ * @since  November 22, 2015
+ * @author John
  */
-public abstract class STC10_SessionTimesOutAfter15MinutesInactivityRainy02Helper extends RationalTestScript
+public abstract class STC10_SessionTimesOutAfter15MinutesOfInactivityHelper extends RationalTestScript
 {
 	/**
 	 * htmlBrowser: with default state.
@@ -110,7 +110,7 @@ public abstract class STC10_SessionTimesOutAfter15MinutesInactivityRainy02Helper
 	 * ISCControlSystem: with default state.
 	 *		.title : ISC Control System
 	 * 		.class : Html.HtmlDocument
-	 * 		.url : http://localhost:8080/International_Science_Consortium/index.jsp
+	 * 		.url : http://localhost:8080/International_Science_Consortium/messagePage?messageCode=Y ...
 	 */
 	protected DocumentTestObject document_iscControlSystem2() 
 	{
@@ -121,12 +121,43 @@ public abstract class STC10_SessionTimesOutAfter15MinutesInactivityRainy02Helper
 	 * ISCControlSystem: with specific test context and state.
 	 *		.title : ISC Control System
 	 * 		.class : Html.HtmlDocument
-	 * 		.url : http://localhost:8080/International_Science_Consortium/index.jsp
+	 * 		.url : http://localhost:8080/International_Science_Consortium/messagePage?messageCode=Y ...
 	 */
 	protected DocumentTestObject document_iscControlSystem2(TestObject anchor, long flags) 
 	{
 		return new DocumentTestObject(
                         getMappedTestObject("document_iscControlSystem2"), anchor, flags);
+	}
+	
+	/**
+	 * EditPanelistProfile: with default state.
+	 *		.text : Edit Panelist Profile
+	 * 		.id : 
+	 * 		.href : http://localhost:8080/International_Science_Consortium/messagePage?messageCode=Y ...
+	 * 		.title : 
+	 * 		.class : Html.A
+	 * 		.name : 
+	 * 		.classIndex : 0
+	 */
+	protected GuiTestObject link_editPanelistProfile() 
+	{
+		return new GuiTestObject(
+                        getMappedTestObject("link_editPanelistProfile"));
+	}
+	/**
+	 * EditPanelistProfile: with specific test context and state.
+	 *		.text : Edit Panelist Profile
+	 * 		.id : 
+	 * 		.href : http://localhost:8080/International_Science_Consortium/messagePage?messageCode=Y ...
+	 * 		.title : 
+	 * 		.class : Html.A
+	 * 		.name : 
+	 * 		.classIndex : 0
+	 */
+	protected GuiTestObject link_editPanelistProfile(TestObject anchor, long flags) 
+	{
+		return new GuiTestObject(
+                        getMappedTestObject("link_editPanelistProfile"), anchor, flags);
 	}
 	
 	/**
@@ -161,30 +192,30 @@ public abstract class STC10_SessionTimesOutAfter15MinutesInactivityRainy02Helper
 	}
 	
 	/**
-	 * HtmlTable_0: with default state.
+	 * HtmlTable_1: with default state.
 	 *		.id : 
 	 * 		.title : 
 	 * 		.class : Html.TABLE
 	 * 		.caption : 
-	 * 		.classIndex : 0
+	 * 		.classIndex : 1
 	 */
-	protected StatelessGuiSubitemTestObject table_htmlTable_0() 
+	protected StatelessGuiSubitemTestObject table_htmlTable_1() 
 	{
 		return new StatelessGuiSubitemTestObject(
-                        getMappedTestObject("table_htmlTable_0"));
+                        getMappedTestObject("table_htmlTable_1"));
 	}
 	/**
-	 * HtmlTable_0: with specific test context and state.
+	 * HtmlTable_1: with specific test context and state.
 	 *		.id : 
 	 * 		.title : 
 	 * 		.class : Html.TABLE
 	 * 		.caption : 
-	 * 		.classIndex : 0
+	 * 		.classIndex : 1
 	 */
-	protected StatelessGuiSubitemTestObject table_htmlTable_0(TestObject anchor, long flags) 
+	protected StatelessGuiSubitemTestObject table_htmlTable_1(TestObject anchor, long flags) 
 	{
 		return new StatelessGuiSubitemTestObject(
-                        getMappedTestObject("table_htmlTable_0"), anchor, flags);
+                        getMappedTestObject("table_htmlTable_1"), anchor, flags);
 	}
 	
 	/**
@@ -246,34 +277,94 @@ public abstract class STC10_SessionTimesOutAfter15MinutesInactivityRainy02Helper
 	}
 	
 	/**
-	 * Locate and return the verification point HtmlTable_0_grid object in the SUT.
+	 * Locate and return the verification point Rainy1Browser object in the SUT.
 	 */
-	protected IFtVerificationPoint HtmlTable_0_gridVP() 
+	protected IFtVerificationPoint Rainy1BrowserVP() 
 	{
-		return vp("HtmlTable_0_grid");
+		return vp("Rainy1Browser");
 	}
-	protected IFtVerificationPoint HtmlTable_0_gridVP(TestObject anchor)
+	protected IFtVerificationPoint Rainy1BrowserVP(TestObject anchor)
 	{
-		return vp("HtmlTable_0_grid", anchor);
+		return vp("Rainy1Browser", anchor);
 	}
 	
 	/**
-	 * Locate and return the verification point Logout_text object in the SUT.
+	 * Locate and return the verification point Rainy1HtmlTable object in the SUT.
 	 */
-	protected IFtVerificationPoint Logout_textVP() 
+	protected IFtVerificationPoint Rainy1HtmlTableVP() 
 	{
-		return vp("Logout_text");
+		return vp("Rainy1HtmlTable");
 	}
-	protected IFtVerificationPoint Logout_textVP(TestObject anchor)
+	protected IFtVerificationPoint Rainy1HtmlTableVP(TestObject anchor)
 	{
-		return vp("Logout_text", anchor);
+		return vp("Rainy1HtmlTable", anchor);
+	}
+	
+	/**
+	 * Locate and return the verification point Rainy2Browser object in the SUT.
+	 */
+	protected IFtVerificationPoint Rainy2BrowserVP() 
+	{
+		return vp("Rainy2Browser");
+	}
+	protected IFtVerificationPoint Rainy2BrowserVP(TestObject anchor)
+	{
+		return vp("Rainy2Browser", anchor);
+	}
+	
+	/**
+	 * Locate and return the verification point Rainy2HtmlTable object in the SUT.
+	 */
+	protected IFtVerificationPoint Rainy2HtmlTableVP() 
+	{
+		return vp("Rainy2HtmlTable");
+	}
+	protected IFtVerificationPoint Rainy2HtmlTableVP(TestObject anchor)
+	{
+		return vp("Rainy2HtmlTable", anchor);
+	}
+	
+	/**
+	 * Locate and return the verification point Rainy3Browser object in the SUT.
+	 */
+	protected IFtVerificationPoint Rainy3BrowserVP() 
+	{
+		return vp("Rainy3Browser");
+	}
+	protected IFtVerificationPoint Rainy3BrowserVP(TestObject anchor)
+	{
+		return vp("Rainy3Browser", anchor);
+	}
+	
+	/**
+	 * Locate and return the verification point Rainy3HtmlTable object in the SUT.
+	 */
+	protected IFtVerificationPoint Rainy3HtmlTableVP() 
+	{
+		return vp("Rainy3HtmlTable");
+	}
+	protected IFtVerificationPoint Rainy3HtmlTableVP(TestObject anchor)
+	{
+		return vp("Rainy3HtmlTable", anchor);
+	}
+	
+	/**
+	 * Locate and return the verification point SunnyBrowser object in the SUT.
+	 */
+	protected IFtVerificationPoint SunnyBrowserVP() 
+	{
+		return vp("SunnyBrowser");
+	}
+	protected IFtVerificationPoint SunnyBrowserVP(TestObject anchor)
+	{
+		return vp("SunnyBrowser", anchor);
 	}
 	
 	
 
-	protected STC10_SessionTimesOutAfter15MinutesInactivityRainy02Helper()
+	protected STC10_SessionTimesOutAfter15MinutesOfInactivityHelper()
 	{
-		setScriptName("STC10_SessionTimesOutAfter15MinutesInactivityRainy02");
+		setScriptName("STC10_SessionTimesOutAfter15MinutesOfInactivity");
 	}
 	
 }

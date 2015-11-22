@@ -1,5 +1,5 @@
 
-import resources.STC10_15MinTimeOutHelper;
+import resources.STC10_SessionTimesOutAfter15MinutesOfInactivityHelper;
 import com.rational.test.ft.*;
 import com.rational.test.ft.object.interfaces.*;
 import com.rational.test.ft.object.interfaces.SAP.*;
@@ -16,7 +16,7 @@ import com.ibm.rational.test.ft.object.interfaces.sapwebportal.*;
  * Description   : Functional Test Script
  * @author John
  */
-public class STC10_15MinTimeOut extends STC10_15MinTimeOutHelper
+public class STC10_SessionTimesOutAfter15MinutesOfInactivity extends STC10_SessionTimesOutAfter15MinutesOfInactivityHelper
 {
 	/**
 	 * Script Name   : <b>STC10_15MinTimeOut</b>
@@ -25,7 +25,7 @@ public class STC10_15MinTimeOut extends STC10_15MinTimeOutHelper
 	 * Original Host : WinNT Version 6.3  Build 9600 ()
 	 * 
 	 * @since  2015/11/22
-	 * @author John
+	 * @author John Burke
 	 */
 	public void testMain(Object[] args) 
 	{
@@ -57,18 +57,56 @@ public class STC10_15MinTimeOut extends STC10_15MinTimeOutHelper
 		
 		// verification points
 		if(SUNNY){
-			// sleep for sixteen minutes
+			// sleep for 16 minutes
 			sleep(960); 
 			
 			// verification point 
 			browser_htmlBrowser().performTest(SunnyBrowserVP());
+			
 		} else if(RAINY1){
+			// Verification point #1
+			table_htmlTable_1().performTest(Rainy1HtmlTableVP());
+			
+			// sleep 14 1/2 minutes
+			sleep(870);
+		
+			// find and click logout
+			((GuiTestObject)link_logout().find()).click();
+
+			// Verification point #2
+			browser_htmlBrowser().performTest(Rainy1BrowserVP());
 			
 		} else if(RAINY2){
+			// Verification point #1
+			table_htmlTable_1().performTest(Rainy2HtmlTableVP());
+			
+			// sleep 14 1/2 minutes
+			sleep(870);
+			
+			// find and click logout
+			((GuiTestObject)link_logout().find()).click();
+
+			// Verification point #2
+			browser_htmlBrowser().performTest(Rainy2BrowserVP());
 			
 		} else if(RAINY3){
+			// Verification point #1
+			table_htmlTable_1().performTest(Rainy3HtmlTableVP());
+			
+			sleep(870);
+				
+
+			((GuiTestObject)link_editPanelistProfile().find()).click();
+
+			// Verification point #2
+			browser_htmlBrowser().performTest(Rainy3BrowserVP());
+			
+			// find and click logout
+			((GuiTestObject)link_logout().find()).click();
 			
 		}
+		// HTML Browser
+		browser_htmlBrowser(document_iscControlSystem2(),DEFAULT_FLAGS).close();
 	}
 }
 
