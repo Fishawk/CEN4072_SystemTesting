@@ -20,7 +20,7 @@ import com.rational.test.ft.vp.IFtVerificationPoint;
 import com.ibm.rational.test.ft.object.interfaces.sapwebportal.*;
 /**
  * Script Name   : <b>STC07_UpdatePanelStatusAndHistory</b><br>
- * Generated     : <b>2015/11/22 2:37:42 AM</b><br>
+ * Generated     : <b>2015/11/22 2:47:20 PM</b><br>
  * Description   : Helper class for script<br>
  * Original Host : Windows 8.1 x86 6.3 <br>
  * 
@@ -217,8 +217,8 @@ public abstract class STC07_UpdatePanelStatusAndHistoryHelper extends RationalTe
 	/**
 	 * DisplayMyPanels: with default state.
 	 *		.text : Display My Panels
-	 * 		.id : 
 	 * 		.href : http://localhost:8080/International_Science_Consortium/displayPanels.jsp
+	 * 		.id : 
 	 * 		.title : 
 	 * 		.class : Html.A
 	 * 		.name : 
@@ -232,8 +232,8 @@ public abstract class STC07_UpdatePanelStatusAndHistoryHelper extends RationalTe
 	/**
 	 * DisplayMyPanels: with specific test context and state.
 	 *		.text : Display My Panels
-	 * 		.id : 
 	 * 		.href : http://localhost:8080/International_Science_Consortium/displayPanels.jsp
+	 * 		.id : 
 	 * 		.title : 
 	 * 		.class : Html.A
 	 * 		.name : 
@@ -248,8 +248,8 @@ public abstract class STC07_UpdatePanelStatusAndHistoryHelper extends RationalTe
 	/**
 	 * Logout: with default state.
 	 *		.text : Logout
-	 * 		.id : 
 	 * 		.href : http://localhost:8080/International_Science_Consortium/logout
+	 * 		.id : 
 	 * 		.title : 
 	 * 		.class : Html.A
 	 * 		.name : 
@@ -263,8 +263,8 @@ public abstract class STC07_UpdatePanelStatusAndHistoryHelper extends RationalTe
 	/**
 	 * Logout: with specific test context and state.
 	 *		.text : Logout
-	 * 		.id : 
 	 * 		.href : http://localhost:8080/International_Science_Consortium/logout
+	 * 		.id : 
 	 * 		.title : 
 	 * 		.class : Html.A
 	 * 		.name : 
@@ -279,8 +279,8 @@ public abstract class STC07_UpdatePanelStatusAndHistoryHelper extends RationalTe
 	/**
 	 * ViewPanel: with default state.
 	 *		.text : View Panel
-	 * 		.id : 
 	 * 		.href : http://localhost:8080/International_Science_Consortium/displayPanel.jsp?panelID= ...
+	 * 		.id : 
 	 * 		.title : 
 	 * 		.class : Html.A
 	 * 		.name : 
@@ -294,8 +294,8 @@ public abstract class STC07_UpdatePanelStatusAndHistoryHelper extends RationalTe
 	/**
 	 * ViewPanel: with specific test context and state.
 	 *		.text : View Panel
-	 * 		.id : 
 	 * 		.href : http://localhost:8080/International_Science_Consortium/displayPanel.jsp?panelID= ...
+	 * 		.id : 
 	 * 		.title : 
 	 * 		.class : Html.A
 	 * 		.name : 
@@ -305,6 +305,37 @@ public abstract class STC07_UpdatePanelStatusAndHistoryHelper extends RationalTe
 	{
 		return new GuiTestObject(
                         getMappedTestObject("link_viewPanel"), anchor, flags);
+	}
+	
+	/**
+	 * ViewPanel: with default state.
+	 *		.text : View Panel
+	 * 		.id : 
+	 * 		.href : http://localhost:8080/International_Science_Consortium/displayPanel.jsp?panelID= ...
+	 * 		.title : 
+	 * 		.class : Html.A
+	 * 		.name : 
+	 * 		.classIndex : 1
+	 */
+	protected GuiTestObject link_viewPanel2() 
+	{
+		return new GuiTestObject(
+                        getMappedTestObject("link_viewPanel2"));
+	}
+	/**
+	 * ViewPanel: with specific test context and state.
+	 *		.text : View Panel
+	 * 		.id : 
+	 * 		.href : http://localhost:8080/International_Science_Consortium/displayPanel.jsp?panelID= ...
+	 * 		.title : 
+	 * 		.class : Html.A
+	 * 		.name : 
+	 * 		.classIndex : 1
+	 */
+	protected GuiTestObject link_viewPanel2(TestObject anchor, long flags) 
+	{
+		return new GuiTestObject(
+                        getMappedTestObject("link_viewPanel2"), anchor, flags);
 	}
 	
 	/**
@@ -361,6 +392,33 @@ public abstract class STC07_UpdatePanelStatusAndHistoryHelper extends RationalTe
 	{
 		return new StatelessGuiSubitemTestObject(
                         getMappedTestObject("table_htmlTable_0"), anchor, flags);
+	}
+	
+	/**
+	 * HtmlTable_0: with default state.
+	 *		.id : 
+	 * 		.title : 
+	 * 		.class : Html.TABLE
+	 * 		.caption : 
+	 * 		.classIndex : 0
+	 */
+	protected StatelessGuiSubitemTestObject table_htmlTable_0_2() 
+	{
+		return new StatelessGuiSubitemTestObject(
+                        getMappedTestObject("table_htmlTable_0_2"));
+	}
+	/**
+	 * HtmlTable_0: with specific test context and state.
+	 *		.id : 
+	 * 		.title : 
+	 * 		.class : Html.TABLE
+	 * 		.caption : 
+	 * 		.classIndex : 0
+	 */
+	protected StatelessGuiSubitemTestObject table_htmlTable_0_2(TestObject anchor, long flags) 
+	{
+		return new StatelessGuiSubitemTestObject(
+                        getMappedTestObject("table_htmlTable_0_2"), anchor, flags);
 	}
 	
 	/**
@@ -578,39 +636,27 @@ public abstract class STC07_UpdatePanelStatusAndHistoryHelper extends RationalTe
 	}
 	
 	/**
-	 * Locate and return the verification point Rainy3Browser object in the SUT.
+	 * Locate and return the verification point Rainy3Browser1 object in the SUT.
 	 */
-	protected IFtVerificationPoint Rainy3BrowserVP() 
+	protected IFtVerificationPoint Rainy3Browser1VP() 
 	{
-		return vp("Rainy3Browser");
+		return vp("Rainy3Browser1");
 	}
-	protected IFtVerificationPoint Rainy3BrowserVP(TestObject anchor)
+	protected IFtVerificationPoint Rainy3Browser1VP(TestObject anchor)
 	{
-		return vp("Rainy3Browser", anchor);
+		return vp("Rainy3Browser1", anchor);
 	}
 	
 	/**
-	 * Locate and return the verification point Rainy3HtmlTable object in the SUT.
+	 * Locate and return the verification point Rainy3Table1 object in the SUT.
 	 */
-	protected IFtVerificationPoint Rainy3HtmlTableVP() 
+	protected IFtVerificationPoint Rainy3Table1VP() 
 	{
-		return vp("Rainy3HtmlTable");
+		return vp("Rainy3Table1");
 	}
-	protected IFtVerificationPoint Rainy3HtmlTableVP(TestObject anchor)
+	protected IFtVerificationPoint Rainy3Table1VP(TestObject anchor)
 	{
-		return vp("Rainy3HtmlTable", anchor);
-	}
-	
-	/**
-	 * Locate and return the verification point Rainy3HtmlTable2 object in the SUT.
-	 */
-	protected IFtVerificationPoint Rainy3HtmlTable2VP() 
-	{
-		return vp("Rainy3HtmlTable2");
-	}
-	protected IFtVerificationPoint Rainy3HtmlTable2VP(TestObject anchor)
-	{
-		return vp("Rainy3HtmlTable2", anchor);
+		return vp("Rainy3Table1", anchor);
 	}
 	
 	/**

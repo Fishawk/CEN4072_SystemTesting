@@ -153,7 +153,8 @@ public class STC08_ViewPanelInformation extends STC08_ViewPanelInformationHelper
 
 		} else if (RAINY3) { // early logout
 			// Verification point #1
-			browser_htmlBrowser().performTest(htmlBrowser_standardVP());
+			browser_htmlBrowser().performTest(Rainy3Browser1VP());
+			
 
 			// Verification point #2
 			link_displayMyPanels().performTest(Rainy3DisplayMyPanels_textVP());
@@ -165,7 +166,7 @@ public class STC08_ViewPanelInformation extends STC08_ViewPanelInformationHelper
 
 		if (RAINY3) { // last verification point for rainy 3
 			// Verification point #3
-			browser_htmlBrowser().performTest(Rainy3BrowserVP());
+			browser_htmlBrowser().performTest(Rainy3Browser2VP());
 		}
 
 		// close browser

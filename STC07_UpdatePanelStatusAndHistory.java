@@ -111,35 +111,47 @@ public class STC07_UpdatePanelStatusAndHistory extends STC07_UpdatePanelStatusAn
 			((GuiTestObject)link_displayMyPanels().find()).click();
 
 			// click view panels link
-			((GuiTestObject)link_viewPanel().find()).click();
+			((GuiTestObject)link_viewPanel2().find()).click();
 			
 		
 			// Verification point #1
-			browser_htmlBrowser().performTest(Rainy3BrowserVP());
+			browser_htmlBrowser().performTest(Rainy3Browser1VP());
+			
+			
 			// Verification point #2
-			table_htmlTable_2().performTest(Rainy3HtmlTableVP());
-			
-			
-			// HTML Browser
-			//table_htmlTable_1_2().performTest(Rainy3UpdatePanelStatusAndHistoryVP());
+			table_htmlTable_0_2().performTest(Rainy3Table1VP());
 			
 			// close browser
 			browser_htmlBrowser(document_iscControlSystem3(),DEFAULT_FLAGS).close();
-
+			sleep(30);
 			// HTML Browser
 			// Document: ISC Control System: 
 			startApp("http://localhost:8080/International_Science_Consortium/");
+			
+			// find and enter user name
+			((TextGuiTestObject)text_username().find()).click();
+			browser_htmlBrowser(document_iscControlSystem(),DEFAULT_FLAGS)
+				.inputChars(dpString("Login"));
+			
+			// find and enter password
+			((TextGuiTestObject)text_password().find()).click();
+			browser_htmlBrowser(document_iscControlSystem(),DEFAULT_FLAGS)
+				.inputChars(dpString("Login"));
+			
+			// click login button
+			button_logInsubmit().click();
 			
 			// click display my panels link
 			((GuiTestObject)link_displayMyPanels().find()).click();
 
 			// click view panels link
-			((GuiTestObject)link_viewPanel().find()).click();
+			((GuiTestObject)link_viewPanel2().find()).click();
 			
 			// Verification point #1
-			browser_htmlBrowser().performTest(Rainy3BrowserVP());
+			browser_htmlBrowser().performTest(Rainy3Browser1VP());
+			
 			// Verification point #2
-			table_htmlTable_2().performTest(Rainy3HtmlTable2VP());
+			table_htmlTable_0_2().performTest(Rainy3Table1VP());
 			
 		}
 		

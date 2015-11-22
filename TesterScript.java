@@ -14,7 +14,7 @@ import com.rational.test.ft.vp.*;
 import com.ibm.rational.test.ft.object.interfaces.sapwebportal.*;
 /**
  * Description   : Functional Test Script
- * @author John
+ * @author John Burke
  */
 public class TesterScript extends TesterScriptHelper
 {

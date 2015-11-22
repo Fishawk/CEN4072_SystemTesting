@@ -3,6 +3,9 @@ This project is for the System TESTING portion of the Course project.
 The most recent changes in the read me file at the top
 
 Burke: 11/22/2015
+corrected time stamp issue with RFT
+
+Burke: 11/22/2015
 1) STC10 completed and tested
 
 Burke: 11/22/2015

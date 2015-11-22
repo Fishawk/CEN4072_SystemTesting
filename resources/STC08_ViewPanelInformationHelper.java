@@ -20,7 +20,7 @@ import com.rational.test.ft.vp.IFtVerificationPoint;
 import com.ibm.rational.test.ft.object.interfaces.sapwebportal.*;
 /**
  * Script Name   : <b>STC08_ViewPanelInformation</b><br>
- * Generated     : <b>2015/11/22 2:30:15 AM</b><br>
+ * Generated     : <b>2015/11/22 4:49:10 PM</b><br>
  * Description   : Helper class for script<br>
  * Original Host : Windows 8.1 x86 6.3 <br>
  * 
@@ -436,18 +436,6 @@ public abstract class STC08_ViewPanelInformationHelper extends RationalTestScrip
 	}
 	
 	/**
-	 * Locate and return the verification point htmlBrowser_standard object in the SUT.
-	 */
-	protected IFtVerificationPoint htmlBrowser_standardVP() 
-	{
-		return vp("htmlBrowser_standard");
-	}
-	protected IFtVerificationPoint htmlBrowser_standardVP(TestObject anchor)
-	{
-		return vp("htmlBrowser_standard", anchor);
-	}
-	
-	/**
 	 * Locate and return the verification point Rainy1Administer_text object in the SUT.
 	 */
 	protected IFtVerificationPoint Rainy1Administer_textVP() 
@@ -520,15 +508,27 @@ public abstract class STC08_ViewPanelInformationHelper extends RationalTestScrip
 	}
 	
 	/**
-	 * Locate and return the verification point Rainy3Browser object in the SUT.
+	 * Locate and return the verification point Rainy3Browser1 object in the SUT.
 	 */
-	protected IFtVerificationPoint Rainy3BrowserVP() 
+	protected IFtVerificationPoint Rainy3Browser1VP() 
 	{
-		return vp("Rainy3Browser");
+		return vp("Rainy3Browser1");
 	}
-	protected IFtVerificationPoint Rainy3BrowserVP(TestObject anchor)
+	protected IFtVerificationPoint Rainy3Browser1VP(TestObject anchor)
 	{
-		return vp("Rainy3Browser", anchor);
+		return vp("Rainy3Browser1", anchor);
+	}
+	
+	/**
+	 * Locate and return the verification point Rainy3Browser2 object in the SUT.
+	 */
+	protected IFtVerificationPoint Rainy3Browser2VP() 
+	{
+		return vp("Rainy3Browser2");
+	}
+	protected IFtVerificationPoint Rainy3Browser2VP(TestObject anchor)
+	{
+		return vp("Rainy3Browser2", anchor);
 	}
 	
 	/**
