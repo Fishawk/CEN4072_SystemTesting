@@ -19,15 +19,15 @@ import com.rational.test.ft.script.*;
 import com.rational.test.ft.vp.IFtVerificationPoint;
 import com.ibm.rational.test.ft.object.interfaces.sapwebportal.*;
 /**
- * Script Name   : <b>STC02_Login</b><br>
- * Generated     : <b>2015/11/22 2:40:51 AM</b><br>
+ * Script Name   : <b>STC10_15MinTimeOut</b><br>
+ * Generated     : <b>2015/11/22 3:11:33 AM</b><br>
  * Description   : Helper class for script<br>
  * Original Host : Windows 8.1 x86 6.3 <br>
  * 
  * @since  November 22, 2015
  * @author John
  */
-public abstract class STC02_LoginHelper extends RationalTestScript
+public abstract class STC10_15MinTimeOutHelper extends RationalTestScript
 {
 	/**
 	 * htmlBrowser: with default state.
@@ -57,8 +57,8 @@ public abstract class STC02_LoginHelper extends RationalTestScript
 	 *		.id : 
 	 * 		.type : submit
 	 * 		.value : Log In
-	 * 		.title : 
 	 * 		.class : Html.INPUT.submit
+	 * 		.title : 
 	 * 		.name : loginButton
 	 * 		.classIndex : 0
 	 */
@@ -72,8 +72,8 @@ public abstract class STC02_LoginHelper extends RationalTestScript
 	 *		.id : 
 	 * 		.type : submit
 	 * 		.value : Log In
-	 * 		.title : 
 	 * 		.class : Html.INPUT.submit
+	 * 		.title : 
 	 * 		.name : loginButton
 	 * 		.classIndex : 0
 	 */
@@ -85,8 +85,8 @@ public abstract class STC02_LoginHelper extends RationalTestScript
 	
 	/**
 	 * ISCControlSystem: with default state.
-	 *		.title : ISC Control System
-	 * 		.class : Html.HtmlDocument
+	 *		.class : Html.HtmlDocument
+	 * 		.title : ISC Control System
 	 * 		.url : http://localhost:8080/International_Science_Consortium/
 	 */
 	protected DocumentTestObject document_iscControlSystem() 
@@ -96,8 +96,8 @@ public abstract class STC02_LoginHelper extends RationalTestScript
 	}
 	/**
 	 * ISCControlSystem: with specific test context and state.
-	 *		.title : ISC Control System
-	 * 		.class : Html.HtmlDocument
+	 *		.class : Html.HtmlDocument
+	 * 		.title : ISC Control System
 	 * 		.url : http://localhost:8080/International_Science_Consortium/
 	 */
 	protected DocumentTestObject document_iscControlSystem(TestObject anchor, long flags) 
@@ -107,65 +107,11 @@ public abstract class STC02_LoginHelper extends RationalTestScript
 	}
 	
 	/**
-	 * ISCControlSystem: with default state.
-	 *		.title : ISC Control System
-	 * 		.class : Html.HtmlDocument
-	 * 		.url : http://localhost:8080/International_Science_Consortium/index.jsp
-	 */
-	protected DocumentTestObject document_iscControlSystem2() 
-	{
-		return new DocumentTestObject(
-                        getMappedTestObject("document_iscControlSystem2"));
-	}
-	/**
-	 * ISCControlSystem: with specific test context and state.
-	 *		.title : ISC Control System
-	 * 		.class : Html.HtmlDocument
-	 * 		.url : http://localhost:8080/International_Science_Consortium/index.jsp
-	 */
-	protected DocumentTestObject document_iscControlSystem2(TestObject anchor, long flags) 
-	{
-		return new DocumentTestObject(
-                        getMappedTestObject("document_iscControlSystem2"), anchor, flags);
-	}
-	
-	/**
-	 * Logout: with default state.
-	 *		.text : Logout
-	 * 		.href : http://localhost:8080/International_Science_Consortium/logout
-	 * 		.id : 
-	 * 		.title : 
-	 * 		.class : Html.A
-	 * 		.name : 
-	 * 		.classIndex : 1
-	 */
-	protected GuiTestObject link_logout() 
-	{
-		return new GuiTestObject(
-                        getMappedTestObject("link_logout"));
-	}
-	/**
-	 * Logout: with specific test context and state.
-	 *		.text : Logout
-	 * 		.href : http://localhost:8080/International_Science_Consortium/logout
-	 * 		.id : 
-	 * 		.title : 
-	 * 		.class : Html.A
-	 * 		.name : 
-	 * 		.classIndex : 1
-	 */
-	protected GuiTestObject link_logout(TestObject anchor, long flags) 
-	{
-		return new GuiTestObject(
-                        getMappedTestObject("link_logout"), anchor, flags);
-	}
-	
-	/**
 	 * password: with default state.
 	 *		.id : 
 	 * 		.type : password
-	 * 		.title : 
 	 * 		.class : Html.INPUT.password
+	 * 		.title : 
 	 * 		.name : password
 	 * 		.classIndex : 0
 	 */
@@ -178,8 +124,8 @@ public abstract class STC02_LoginHelper extends RationalTestScript
 	 * password: with specific test context and state.
 	 *		.id : 
 	 * 		.type : password
-	 * 		.title : 
 	 * 		.class : Html.INPUT.password
+	 * 		.title : 
 	 * 		.name : password
 	 * 		.classIndex : 0
 	 */
@@ -193,8 +139,8 @@ public abstract class STC02_LoginHelper extends RationalTestScript
 	 * username: with default state.
 	 *		.id : 
 	 * 		.type : text
-	 * 		.title : 
 	 * 		.class : Html.INPUT.text
+	 * 		.title : 
 	 * 		.name : username
 	 * 		.classIndex : 0
 	 */
@@ -207,8 +153,8 @@ public abstract class STC02_LoginHelper extends RationalTestScript
 	 * username: with specific test context and state.
 	 *		.id : 
 	 * 		.type : text
-	 * 		.title : 
 	 * 		.class : Html.INPUT.text
+	 * 		.title : 
 	 * 		.name : username
 	 * 		.classIndex : 0
 	 */
@@ -219,34 +165,22 @@ public abstract class STC02_LoginHelper extends RationalTestScript
 	}
 	
 	/**
-	 * Locate and return the verification point FailedLogin object in the SUT.
+	 * Locate and return the verification point SunnyBrowser object in the SUT.
 	 */
-	protected IFtVerificationPoint FailedLoginVP() 
+	protected IFtVerificationPoint SunnyBrowserVP() 
 	{
-		return vp("FailedLogin");
+		return vp("SunnyBrowser");
 	}
-	protected IFtVerificationPoint FailedLoginVP(TestObject anchor)
+	protected IFtVerificationPoint SunnyBrowserVP(TestObject anchor)
 	{
-		return vp("FailedLogin", anchor);
-	}
-	
-	/**
-	 * Locate and return the verification point SunnyLogin object in the SUT.
-	 */
-	protected IFtVerificationPoint SunnyLoginVP() 
-	{
-		return vp("SunnyLogin");
-	}
-	protected IFtVerificationPoint SunnyLoginVP(TestObject anchor)
-	{
-		return vp("SunnyLogin", anchor);
+		return vp("SunnyBrowser", anchor);
 	}
 	
 	
 
-	protected STC02_LoginHelper()
+	protected STC10_15MinTimeOutHelper()
 	{
-		setScriptName("STC02_Login");
+		setScriptName("STC10_15MinTimeOut");
 	}
 	
 }

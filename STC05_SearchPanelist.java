@@ -23,21 +23,27 @@ public class STC05_SearchPanelist extends STC05_SearchPanelistHelper {
 
 		// reset the database
 		SetDB.resetDB(false);
+		
+		final boolean SUNNY1 = dpString("TestType").equalsIgnoreCase("Sunny1");
+		final boolean SUNNY2 = dpString("TestType").equalsIgnoreCase("Sunny2");
+		final boolean SUNNY3 = dpString("TestType").equalsIgnoreCase("Sunny3");
+		final boolean RAINY1 = dpString("TestType").equalsIgnoreCase("Rainy1");
+		final boolean RAINY2 = dpString("TestType").equalsIgnoreCase("Rainy2");
+		final boolean RAINY3 = dpString("TestType").equalsIgnoreCase("Rainy3");
 
 		// register panelist #1-6 to search
 		int index = 1;
 		while(dpString("Panelist " + index).equalsIgnoreCase("True")){
-			SetDB.registerPanelist(
-					dpInt("UserID " + index),				// user ID start at four and count up for each new panelist
+			SetDB.registerPanelist( (3 + index),			// user ID start at '4'
 					dpString("Fname " + index),				// first name
 					dpString("Lname " + index),				// last name
-					dpString("username " + index),			// username
-					dpString("password " + index),			// password
+					dpString("Username " + index),			// username
+					dpString("Password " + index),			// password
 					dpString("Institution " + index),		// Institution
 					dpString("Address " + index),			// Address
-					dpString("city " + index),				// City
+					dpString("City " + index),				// City
 					dpString("State " + index),				// State
-					dpString("zip " + index),				// ZipCode
+					dpString("Zip " + index),				// ZipCode
 					dpString("Telephone " + index),			// Telephone
 					dpString("Email " + index),				// Email
 					dpString("Gender " + index),			// Gender
@@ -49,10 +55,9 @@ public class STC05_SearchPanelist extends STC05_SearchPanelistHelper {
 		
 		// HTML Browser
 		// Document: ISC Control System:
-		// http://localhost:8080/International_Science_Consortium/
 		startApp("http://localhost:8080/International_Science_Consortium/");
 
-		// Find and enter employee username
+		// Find and enter employee user name
 		((GuiTestObject) text_username().find()).click();
 		browser_htmlBrowser(document_iscControlSystem(), DEFAULT_FLAGS)
 				.inputChars(dpString("Login"));
@@ -67,89 +72,88 @@ public class STC05_SearchPanelist extends STC05_SearchPanelistHelper {
 
 		// click search for panelist button
 		((GuiTestObject) link_searchForPanelists().find()).click();
-
-		// Find and enter the first name of panelist
-		((TextGuiTestObject) text_pFName().find()).click();
-		browser_htmlBrowser(document_iscControlSystem2(), DEFAULT_FLAGS)
-				.inputChars(dpString("Fname"));
-
-		// Find and enter the last name of panelist
-		((TextGuiTestObject) text_pLName().find()).click();
-		browser_htmlBrowser(document_iscControlSystem2(), DEFAULT_FLAGS)
-				.inputChars(dpString("Lname"));
-
-		// Find and enter the Institution of panelist
-		((TextGuiTestObject) text_pInstitution().find()).click();
-		browser_htmlBrowser(document_iscControlSystem2(), DEFAULT_FLAGS)
-				.inputChars(dpString("Institution"));
-
-		// Find and enter the Address of panelist
-		((TextGuiTestObject) text_pAddress().find()).click();
-		browser_htmlBrowser(document_iscControlSystem2(), DEFAULT_FLAGS)
-				.inputChars(dpString("Address"));
-
-		// Find and enter the City of panelist
-		((TextGuiTestObject) text_pCity().find()).click();
-		browser_htmlBrowser(document_iscControlSystem2(), DEFAULT_FLAGS)
-				.inputChars(dpString("City"));
-
-		// Find and enter the State of panelist
-		((TextGuiTestObject) text_pState().find()).click();
-		browser_htmlBrowser(document_iscControlSystem2(), DEFAULT_FLAGS)
-				.inputChars(dpString("State"));
-
-		// Find and enter the Zip of panelist
-		((TextGuiTestObject) text_pZip().find()).click();
-		browser_htmlBrowser(document_iscControlSystem2(), DEFAULT_FLAGS)
-				.inputChars(dpString("Zip"));
-
-		// Find and enter the Telephone of panelist
-		((TextGuiTestObject) text_pTelephone().find()).click();
-		browser_htmlBrowser(document_iscControlSystem2(), DEFAULT_FLAGS)
-				.inputChars(dpString("Telephone"));
-
-		// Find and enter the Email of panelist
-		((TextGuiTestObject) text_pEmail().find()).click();
-		browser_htmlBrowser(document_iscControlSystem2(), DEFAULT_FLAGS)
-				.inputChars(dpString("Email"));
-
-		// Find and enter the Gender of panelist
-		((GuiTestObject) list_pGender().find()).click();
-		list_pGender().click(atText(dpString("Gender")));
-
-		// Find and enter the Ethnicity of panelist
-		((TextGuiTestObject) text_pEthnicity().find()).click();
-		browser_htmlBrowser(document_iscControlSystem2(), DEFAULT_FLAGS)
-				.inputChars(dpString("Ethnicity"));
-
-		// Find and enter the Area of expertise of panelist
-		((TextGuiTestObject) text_pExpertise().find()).click();
-		browser_htmlBrowser(document_iscControlSystem2(), DEFAULT_FLAGS)
-				.inputChars(dpString("Area of expertise"));
-
-		// Find and enter the ISC ID of panelist
-		((TextGuiTestObject) text_pISCID().find()).click();
-		browser_htmlBrowser(document_iscControlSystem2(), DEFAULT_FLAGS)
-				.inputKeys(dpString("ISC ID"));
-
-		// Click search button
-		((GuiTestObject) button_searchsubmit().find()).click();
-
+		
 		// Verification point
-		if (dpString("TestType").equalsIgnoreCase("Sunny")) {
+		if (SUNNY1) {
+
+			// Find and enter the first name of panelist
+			((TextGuiTestObject) text_pFName().find()).click();
+			browser_htmlBrowser(document_iscControlSystem2(), DEFAULT_FLAGS)
+					.inputChars(dpString("Fname"));
+
+			// Click search button
+			((GuiTestObject) button_searchsubmit().find()).click();
+
 			// successful search
 			browser_htmlBrowser().performTest(SuccessfulSearchVP());
-		} else if (dpString("TestType").equalsIgnoreCase("Rainy")) {
+			
+		} else if (SUNNY2) {
+			
+			// Find and enter the last name of panelist
+			((TextGuiTestObject) text_pLName().find()).click();
+			browser_htmlBrowser(document_iscControlSystem2(), DEFAULT_FLAGS)
+					.inputChars(dpString("Lname"));
+
+			// Click search button
+			((GuiTestObject) button_searchsubmit().find()).click();
+
+			// successful search
+			browser_htmlBrowser().performTest(SuccessfulSearchVP());
+			
+		}else if (SUNNY3) {
+
+			// Click search button
+			((GuiTestObject) button_searchsubmit().find()).click();
+
+			// successful search
+			browser_htmlBrowser().performTest(SuccessfulSearchVP());
+			
+		}else if (RAINY1) {
+
+			// Find and enter the Telephone of panelist
+			((TextGuiTestObject) text_pTelephone().find()).click();
+			browser_htmlBrowser(document_iscControlSystem2(), DEFAULT_FLAGS)
+					.inputChars(dpString("Telephone"));
+
+			// Click search button
+			((GuiTestObject) button_searchsubmit().find()).click();
+
 			// failed search
 			browser_htmlBrowser().performTest(FailedSearchVP());
+			
+		}else if (RAINY2) {
+
+			// Find and enter the Email of panelist
+			((TextGuiTestObject) text_pEmail().find()).click();
+			browser_htmlBrowser(document_iscControlSystem2(), DEFAULT_FLAGS)
+					.inputChars(dpString("Email"));
+
+			// Click search button
+			((GuiTestObject) button_searchsubmit().find()).click();
+
+			// failed search
+			browser_htmlBrowser().performTest(FailedSearchVP());
+			
+		}else if (RAINY3) {
+
+			// Find and enter the ISC ID of panelist
+			((TextGuiTestObject) text_pISCID().find()).click();
+			browser_htmlBrowser(document_iscControlSystem2(), DEFAULT_FLAGS)
+					.inputKeys(dpString("ISC ID"));
+
+			// Click search button
+			((GuiTestObject) button_searchsubmit().find()).click();
+
+			// failed search
+			browser_htmlBrowser().performTest(FailedSearchVP());
+			
 		}
 
 		// Click logout button for employee
 		((GuiTestObject) link_logout().find()).click();
 
 		// Close the browser
-		browser_htmlBrowser(document_iscControlSystem3(), DEFAULT_FLAGS)
-				.close();
+		browser_htmlBrowser(document_iscControlSystem3(), DEFAULT_FLAGS).close();
 
 		// reset the database
 		SetDB.resetDB(false);

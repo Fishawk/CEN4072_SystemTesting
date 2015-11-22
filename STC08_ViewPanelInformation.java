@@ -68,111 +68,110 @@ public class STC08_ViewPanelInformation extends STC08_ViewPanelInformationHelper
 
 		// Create panels to add panelist to
 		index = 1;
-		while(dpString("Panel " + index).equalsIgnoreCase("True")){
-			SetDB.createPanel((2 +index), 
-					dpString("PanelName " +index) , 
+		while (dpString("Panel " + index).equalsIgnoreCase("True")) {
+			SetDB.createPanel((2 + index),
+					dpString("PanelName " + index),
 					dpString("PanelDescription " + index++));
 		}
-		
+
 		// Add panelist to panel
 		index = 1;
-		while(dpString("AddPanelist " + index).equalsIgnoreCase("True")){
-			SetDB.addPanelistToPanel((999 + index),(2 + index++));
+		while (dpString("AddPanelist " + index).equalsIgnoreCase("True")) {
+			SetDB.addPanelistToPanel((999 + index), (2 + index++));
 		}
-		
+
 		// HTML Browser
 		// Document: ISC Control System:
 		startApp("http://localhost:8080/International_Science_Consortium/");
-		
+
 		// find and enter user name
-		((TextGuiTestObject)text_username().find()).click();
-		browser_htmlBrowser(document_iscControlSystem(),DEFAULT_FLAGS)
-			.inputChars(dpString("Login"));
-		
+		((TextGuiTestObject) text_username().find()).click();
+		browser_htmlBrowser(document_iscControlSystem(), DEFAULT_FLAGS)
+				.inputChars(dpString("Login"));
+
 		// Find and enter password
-		((TextGuiTestObject)text_password().find()).click();
-		browser_htmlBrowser(document_iscControlSystem(),DEFAULT_FLAGS)
-			.inputChars(dpString("Login"));
-		
+		((TextGuiTestObject) text_password().find()).click();
+		browser_htmlBrowser(document_iscControlSystem(), DEFAULT_FLAGS)
+				.inputChars(dpString("Login"));
+
 		// Click login button
 		button_logInsubmit().click();
-		
-		
-		if(SUNNY1){
-			// click display my panels link
-			((GuiTestObject)link_displayMyPanels().find()).click();
-		
-			// Click view panel #1
-			((GuiTestObject)link_viewPanel().find()).click();
-			
-			// Verification point #1
-			browser_htmlBrowser().performTest(Sunny1ViewPanleInformationBrowserVP());
-			
-			// Verification point #2
-			table_htmlTable_1().performTest(Sunny1ViewPanleInformationHtmlTableVP());
-			
-		}else if(SUNNY2){
-			// click display my panels link
-			((GuiTestObject)link_displayMyPanels().find()).click();
-			
-			((GuiTestObject)link_viewPanel2().find()).click();
-			
-			// Verification point #1
-			browser_htmlBrowser().performTest(Sunny2ViewPanleInformationBrowserVP());
-			
-			// Verification point #2
-			table_htmlTable_1().performTest(Sunny2ViewPanleInformationHtmlTableVP());
-		} else if(SUNNY3){
-			// click display my panels link
-			((GuiTestObject)link_displayMyPanels().find()).click();
 
-			((GuiTestObject)link_viewPanel3().find()).click();
-			
-			// Verification point #1
-			browser_htmlBrowser().performTest(Sunny3ViewPanleInformationBrowserVP());
-			
-			// Verification point #2
-			table_htmlTable_1().performTest(Sunny3ViewPanleInformationHtmlTableVP());
-			
-		}else if (RAINY1){ // admin logged in
-			
-			// Verification point #1
-			browser_htmlBrowser().performTest(Rainy1ViewPanleInformationhtmlBrowserVP());
-			
-			// Verification point #2
-			table_htmlTable_0().performTest(Rainy1ViewPanleInformationHtmlTableVP());
-			
-		}else if (RAINY2){ // panelist logged in
-			
-			// Verification point #1
-			browser_htmlBrowser().performTest(Rainy2ViewPanleInformationhtmlBrowserVP());
-			
-			// Verification point #2
-			table_htmlTable_0().performTest(Rainy2ViewPanleInformationHtmlTableVP());
-			
-		}else if (RAINY3){ // early logout
+		if (SUNNY1) {
+			// click display my panels link
+			((GuiTestObject) link_displayMyPanels().find()).click();
 
+			// Click View panel #1
+			((GuiTestObject) link_viewPanel().find()).click();
+
+			// Verification point #1
+			browser_htmlBrowser().performTest(Sunny1BrowserVP());
+
+			// Verification point #2
+			table_htmlTable_1().performTest(Sunny1HtmlTableVP());
+
+		} else if (SUNNY2) {
+			// click display my panels link
+			((GuiTestObject) link_displayMyPanels().find()).click();
+
+			// Click View panel #2
+			((GuiTestObject) link_viewPanel2().find()).click();
+
+			// Verification point #1
+			browser_htmlBrowser().performTest(Sunny2BrowserVP());
+
+			// Verification point #2
+			table_htmlTable_1().performTest(Sunny2HtmlTableVP());
+
+		} else if (SUNNY3) {
+			// click display my panels link
+			((GuiTestObject) link_displayMyPanels().find()).click();
+
+			// Click View panel #3
+			((GuiTestObject) link_viewPanel3().find()).click();
+
+			// Verification point #3
+			browser_htmlBrowser().performTest(Sunny3BrowserVP());
+
+			// Verification point #2
+			table_htmlTable_0().performTest(Sunny3HtmlTableVP());
+
+		} else if (RAINY1) { // admin logged in
+			// Verification point #1
+			browser_htmlBrowser().performTest(Rainy1BrowserVP());
+
+			// Verification point #2
+			link_administer().performTest(Rainy1Administer_textVP());
+
+		} else if (RAINY2) { // panelist logged in
+			// Verification point #1
+			browser_htmlBrowser().performTest(Rainy2BrowserVP());
+
+			// Verification point #2
+			link_editPanelistProfile().performTest(
+					Rainy2PanelistProfile_textVP());
+
+		} else if (RAINY3) { // early logout
 			// Verification point #1
 			browser_htmlBrowser().performTest(htmlBrowser_standardVP());
-			
+
 			// Verification point #2
-			table_htmlTable_0().performTest(Rainy3ViewPanleInformationHtmlTable1VP());
-			
+			link_displayMyPanels().performTest(Rainy3DisplayMyPanels_textVP());
+
 		}
-		
+
 		// Logout
-		((GuiTestObject)link_logout().find()).click();
-		
-		if(RAINY3){ // last verification point for rainy 3
+		((GuiTestObject) link_logout().find()).click();
+
+		if (RAINY3) { // last verification point for rainy 3
 			// Verification point #3
-			browser_htmlBrowser().performTest(Rainy3ViewPanleInformationhtmlBrowserVP());
+			browser_htmlBrowser().performTest(Rainy3BrowserVP());
 		}
-		
+
 		// close browser
 		browser_htmlBrowser(document_iscControlSystem(), DEFAULT_FLAGS).close();
-		
-		//reset database
+
+		// reset database
 		SetDB.resetDB(false);
 	}
 }
-

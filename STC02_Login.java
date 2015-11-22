@@ -46,7 +46,7 @@ public class STC02_Login extends STC02_LoginHelper {
 		//Verification Point 
 		if (dpString("TestType").equalsIgnoreCase("Sunny")) {
 			// verification point
-			browser_htmlBrowser().performTest(LoginURLVP());
+			browser_htmlBrowser().performTest(SunnyLoginVP());
 			
 			// Logout
 			((GuiTestObject) link_logout().find()).click();

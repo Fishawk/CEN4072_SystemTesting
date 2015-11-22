@@ -40,7 +40,7 @@ public class STC04_CreatePanel extends STC04_CreatePanelHelper {
 		// http://localhost:8080/International_Science_Consortium/
 		startApp("http://localhost:8080/International_Science_Consortium/");
 
-		// find and enter username
+		// find and enter user name
 		((TextGuiTestObject) text_username().find()).click();
 		browser_htmlBrowser(document_iscControlSystem(), DEFAULT_FLAGS)
 				.inputKeys(dpString("Login"));
@@ -70,11 +70,11 @@ public class STC04_CreatePanel extends STC04_CreatePanelHelper {
 		// Verification point
 		if (SUNNY) {
 			//successful verification
-			browser_htmlBrowser().performTest(PanelMadeVP());
+			browser_htmlBrowser().performTest(SunnyBrowserVP());
 			
 		} else if(RAINY){
 			// Failed verification 
-			browser_htmlBrowser().performTest(FailedCreatePanelVP());
+			browser_htmlBrowser().performTest(RainyBrowserVP());
 		}
 
 		// Logout 

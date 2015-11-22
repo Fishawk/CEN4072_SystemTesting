@@ -30,6 +30,7 @@ public class TesterScript extends TesterScriptHelper
 	 */
 	public void testMain(Object[] args) throws Exception 
 	{
+		
 		// the index is to control the panelist, panels and panelist add to the panels
 		// for testing
 		int index = 1;
@@ -39,13 +40,13 @@ public class TesterScript extends TesterScriptHelper
 			SetDB.registerPanelist((3 + index),				// user ID start at four and count up for each new panelist
 					dpString("Fname " + index),				// first name
 					dpString("Lname " + index),				// last name
-					dpString("username " + index),			// username
-					dpString("password " + index),			// password
+					dpString("Username " + index),			// username
+					dpString("Password " + index),			// password
 					dpString("Institution " + index),		// Institution
 					dpString("Address " + index),			// Address
-					dpString("city " + index),				// City
+					dpString("City " + index),				// City
 					dpString("State " + index),				// State
-					dpString("zip " + index),				// ZipCode
+					dpString("Zip " + index),				// ZipCode
 					dpString("Telephone " + index),			// Telephone
 					dpString("Email " + index),				// Email
 					dpString("Gender " + index),			// Gender
@@ -69,7 +70,7 @@ public class TesterScript extends TesterScriptHelper
 			index++;
 		}
 		
-		//SetDB.resetDB(false);
+//		SetDB.resetDB(false);
 	}
 }
 

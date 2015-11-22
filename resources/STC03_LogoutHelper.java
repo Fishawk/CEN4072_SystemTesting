@@ -20,11 +20,11 @@ import com.rational.test.ft.vp.IFtVerificationPoint;
 import com.ibm.rational.test.ft.object.interfaces.sapwebportal.*;
 /**
  * Script Name   : <b>STC03_Logout</b><br>
- * Generated     : <b>2015/10/24 2:23:41 PM</b><br>
+ * Generated     : <b>2015/11/22 2:42:03 AM</b><br>
  * Description   : Helper class for script<br>
  * Original Host : Windows 8.1 x86 6.3 <br>
  * 
- * @since  October 24, 2015
+ * @since  November 22, 2015
  * @author John
  */
 public abstract class STC03_LogoutHelper extends RationalTestScript
@@ -132,8 +132,8 @@ public abstract class STC03_LogoutHelper extends RationalTestScript
 	/**
 	 * Administer: with default state.
 	 *		.text : Administer
-	 * 		.href : http://localhost:8080/International_Science_Consortium/messagePage?messageCode=Y ...
 	 * 		.id : 
+	 * 		.href : http://localhost:8080/International_Science_Consortium/messagePage?messageCode=Y ...
 	 * 		.title : 
 	 * 		.class : Html.A
 	 * 		.name : 
@@ -147,8 +147,8 @@ public abstract class STC03_LogoutHelper extends RationalTestScript
 	/**
 	 * Administer: with specific test context and state.
 	 *		.text : Administer
-	 * 		.href : http://localhost:8080/International_Science_Consortium/messagePage?messageCode=Y ...
 	 * 		.id : 
+	 * 		.href : http://localhost:8080/International_Science_Consortium/messagePage?messageCode=Y ...
 	 * 		.title : 
 	 * 		.class : Html.A
 	 * 		.name : 
@@ -163,8 +163,8 @@ public abstract class STC03_LogoutHelper extends RationalTestScript
 	/**
 	 * EditPanelistProfile: with default state.
 	 *		.text : Edit Panelist Profile
-	 * 		.href : http://localhost:8080/International_Science_Consortium/messagePage?messageCode=Y ...
 	 * 		.id : 
+	 * 		.href : http://localhost:8080/International_Science_Consortium/messagePage?messageCode=Y ...
 	 * 		.title : 
 	 * 		.class : Html.A
 	 * 		.name : 
@@ -178,8 +178,8 @@ public abstract class STC03_LogoutHelper extends RationalTestScript
 	/**
 	 * EditPanelistProfile: with specific test context and state.
 	 *		.text : Edit Panelist Profile
-	 * 		.href : http://localhost:8080/International_Science_Consortium/messagePage?messageCode=Y ...
 	 * 		.id : 
+	 * 		.href : http://localhost:8080/International_Science_Consortium/messagePage?messageCode=Y ...
 	 * 		.title : 
 	 * 		.class : Html.A
 	 * 		.name : 
@@ -194,8 +194,8 @@ public abstract class STC03_LogoutHelper extends RationalTestScript
 	/**
 	 * EditPanelistProfile: with default state.
 	 *		.text : Edit Panelist Profile
-	 * 		.id : 
 	 * 		.href : http://localhost:8080/International_Science_Consortium/messagePage?messageCode=Y ...
+	 * 		.id : 
 	 * 		.title : 
 	 * 		.class : Html.A
 	 * 		.name : 
@@ -209,8 +209,8 @@ public abstract class STC03_LogoutHelper extends RationalTestScript
 	/**
 	 * EditPanelistProfile: with specific test context and state.
 	 *		.text : Edit Panelist Profile
-	 * 		.id : 
 	 * 		.href : http://localhost:8080/International_Science_Consortium/messagePage?messageCode=Y ...
+	 * 		.id : 
 	 * 		.title : 
 	 * 		.class : Html.A
 	 * 		.name : 
@@ -225,8 +225,8 @@ public abstract class STC03_LogoutHelper extends RationalTestScript
 	/**
 	 * Logout: with default state.
 	 *		.text : Logout
-	 * 		.id : 
 	 * 		.href : http://localhost:8080/International_Science_Consortium/logout
+	 * 		.id : 
 	 * 		.title : 
 	 * 		.class : Html.A
 	 * 		.name : 
@@ -240,8 +240,8 @@ public abstract class STC03_LogoutHelper extends RationalTestScript
 	/**
 	 * Logout: with specific test context and state.
 	 *		.text : Logout
-	 * 		.id : 
 	 * 		.href : http://localhost:8080/International_Science_Consortium/logout
+	 * 		.id : 
 	 * 		.title : 
 	 * 		.class : Html.A
 	 * 		.name : 
@@ -256,8 +256,8 @@ public abstract class STC03_LogoutHelper extends RationalTestScript
 	/**
 	 * SearchForPanelists: with default state.
 	 *		.text : Search for Panelists
-	 * 		.href : http://localhost:8080/International_Science_Consortium/searchPanelists.jsp
 	 * 		.id : 
+	 * 		.href : http://localhost:8080/International_Science_Consortium/searchPanelists.jsp
 	 * 		.title : 
 	 * 		.class : Html.A
 	 * 		.name : 
@@ -271,8 +271,8 @@ public abstract class STC03_LogoutHelper extends RationalTestScript
 	/**
 	 * SearchForPanelists: with specific test context and state.
 	 *		.text : Search for Panelists
-	 * 		.href : http://localhost:8080/International_Science_Consortium/searchPanelists.jsp
 	 * 		.id : 
+	 * 		.href : http://localhost:8080/International_Science_Consortium/searchPanelists.jsp
 	 * 		.title : 
 	 * 		.class : Html.A
 	 * 		.name : 
@@ -343,51 +343,51 @@ public abstract class STC03_LogoutHelper extends RationalTestScript
 	}
 	
 	/**
-	 * Locate and return the verification point FailedLogout1 object in the SUT.
+	 * Locate and return the verification point Rainy1Browser object in the SUT.
 	 */
-	protected IFtVerificationPoint FailedLogout1VP() 
+	protected IFtVerificationPoint Rainy1BrowserVP() 
 	{
-		return vp("FailedLogout1");
+		return vp("Rainy1Browser");
 	}
-	protected IFtVerificationPoint FailedLogout1VP(TestObject anchor)
+	protected IFtVerificationPoint Rainy1BrowserVP(TestObject anchor)
 	{
-		return vp("FailedLogout1", anchor);
+		return vp("Rainy1Browser", anchor);
 	}
 	
 	/**
-	 * Locate and return the verification point FailedLogout2 object in the SUT.
+	 * Locate and return the verification point Rainy2Browser object in the SUT.
 	 */
-	protected IFtVerificationPoint FailedLogout2VP() 
+	protected IFtVerificationPoint Rainy2BrowserVP() 
 	{
-		return vp("FailedLogout2");
+		return vp("Rainy2Browser");
 	}
-	protected IFtVerificationPoint FailedLogout2VP(TestObject anchor)
+	protected IFtVerificationPoint Rainy2BrowserVP(TestObject anchor)
 	{
-		return vp("FailedLogout2", anchor);
+		return vp("Rainy2Browser", anchor);
 	}
 	
 	/**
-	 * Locate and return the verification point FailedLogout3 object in the SUT.
+	 * Locate and return the verification point Rainy3Browser object in the SUT.
 	 */
-	protected IFtVerificationPoint FailedLogout3VP() 
+	protected IFtVerificationPoint Rainy3BrowserVP() 
 	{
-		return vp("FailedLogout3");
+		return vp("Rainy3Browser");
 	}
-	protected IFtVerificationPoint FailedLogout3VP(TestObject anchor)
+	protected IFtVerificationPoint Rainy3BrowserVP(TestObject anchor)
 	{
-		return vp("FailedLogout3", anchor);
+		return vp("Rainy3Browser", anchor);
 	}
 	
 	/**
-	 * Locate and return the verification point SuccessfulLogout object in the SUT.
+	 * Locate and return the verification point SunnyBrowser object in the SUT.
 	 */
-	protected IFtVerificationPoint SuccessfulLogoutVP() 
+	protected IFtVerificationPoint SunnyBrowserVP() 
 	{
-		return vp("SuccessfulLogout");
+		return vp("SunnyBrowser");
 	}
-	protected IFtVerificationPoint SuccessfulLogoutVP(TestObject anchor)
+	protected IFtVerificationPoint SunnyBrowserVP(TestObject anchor)
 	{
-		return vp("SuccessfulLogout", anchor);
+		return vp("SunnyBrowser", anchor);
 	}
 	
 	

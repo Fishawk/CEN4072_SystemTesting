@@ -20,11 +20,11 @@ import com.rational.test.ft.vp.IFtVerificationPoint;
 import com.ibm.rational.test.ft.object.interfaces.sapwebportal.*;
 /**
  * Script Name   : <b>STC04_CreatePanel</b><br>
- * Generated     : <b>2015/10/26 10:11:09 AM</b><br>
+ * Generated     : <b>2015/11/22 2:42:49 AM</b><br>
  * Description   : Helper class for script<br>
  * Original Host : Windows 8.1 x86 6.3 <br>
  * 
- * @since  October 26, 2015
+ * @since  November 22, 2015
  * @author John
  */
 public abstract class STC04_CreatePanelHelper extends RationalTestScript
@@ -186,8 +186,8 @@ public abstract class STC04_CreatePanelHelper extends RationalTestScript
 	/**
 	 * CreateAPanel: with default state.
 	 *		.text : Create a Panel
-	 * 		.id : 
 	 * 		.href : http://localhost:8080/International_Science_Consortium/createPanel.jsp
+	 * 		.id : 
 	 * 		.title : 
 	 * 		.class : Html.A
 	 * 		.name : 
@@ -201,8 +201,8 @@ public abstract class STC04_CreatePanelHelper extends RationalTestScript
 	/**
 	 * CreateAPanel: with specific test context and state.
 	 *		.text : Create a Panel
-	 * 		.id : 
 	 * 		.href : http://localhost:8080/International_Science_Consortium/createPanel.jsp
+	 * 		.id : 
 	 * 		.title : 
 	 * 		.class : Html.A
 	 * 		.name : 
@@ -217,8 +217,8 @@ public abstract class STC04_CreatePanelHelper extends RationalTestScript
 	/**
 	 * Logout: with default state.
 	 *		.text : Logout
-	 * 		.id : 
 	 * 		.href : http://localhost:8080/International_Science_Consortium/logout
+	 * 		.id : 
 	 * 		.title : 
 	 * 		.class : Html.A
 	 * 		.name : 
@@ -232,8 +232,8 @@ public abstract class STC04_CreatePanelHelper extends RationalTestScript
 	/**
 	 * Logout: with specific test context and state.
 	 *		.text : Logout
-	 * 		.id : 
 	 * 		.href : http://localhost:8080/International_Science_Consortium/logout
+	 * 		.id : 
 	 * 		.title : 
 	 * 		.class : Html.A
 	 * 		.name : 
@@ -360,27 +360,27 @@ public abstract class STC04_CreatePanelHelper extends RationalTestScript
 	}
 	
 	/**
-	 * Locate and return the verification point FailedCreatePanel object in the SUT.
+	 * Locate and return the verification point RainyBrowser object in the SUT.
 	 */
-	protected IFtVerificationPoint FailedCreatePanelVP() 
+	protected IFtVerificationPoint RainyBrowserVP() 
 	{
-		return vp("FailedCreatePanel");
+		return vp("RainyBrowser");
 	}
-	protected IFtVerificationPoint FailedCreatePanelVP(TestObject anchor)
+	protected IFtVerificationPoint RainyBrowserVP(TestObject anchor)
 	{
-		return vp("FailedCreatePanel", anchor);
+		return vp("RainyBrowser", anchor);
 	}
 	
 	/**
-	 * Locate and return the verification point PanelMade object in the SUT.
+	 * Locate and return the verification point SunnyBrowser object in the SUT.
 	 */
-	protected IFtVerificationPoint PanelMadeVP() 
+	protected IFtVerificationPoint SunnyBrowserVP() 
 	{
-		return vp("PanelMade");
+		return vp("SunnyBrowser");
 	}
-	protected IFtVerificationPoint PanelMadeVP(TestObject anchor)
+	protected IFtVerificationPoint SunnyBrowserVP(TestObject anchor)
 	{
-		return vp("PanelMade", anchor);
+		return vp("SunnyBrowser", anchor);
 	}
 	
 	

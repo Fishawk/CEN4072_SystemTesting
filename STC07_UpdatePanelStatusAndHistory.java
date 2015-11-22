@@ -79,28 +79,28 @@ public class STC07_UpdatePanelStatusAndHistory extends STC07_UpdatePanelStatusAn
 			
 			// Verification point #1
 			browser_htmlBrowser().performTest(
-					SunnyUpdatePanelStatusAndHistoryVP());
+					SunnyBrowserVP());
 			
 			// Verification point #2
 			table_htmlTable_1().performTest(
-					SunnyUpdatePanelStatusAndHistoryHtmlTableVP());
+					SunnyHtmlTableVP());
 
 			// click logout button
 			((GuiTestObject)link_logout().find()).click();
 			
 		}else if (RAINY1){
 			// Verification point #1
-			browser_htmlBrowser().performTest(Rainy1UpdatePanelStatusAndHistoryVP());
+			browser_htmlBrowser().performTest(Rainy1BrowserVP());
 
 			// Verification point #2
-			table_htmlTable_0().performTest(Rainy1UpdatePanelStatusAndHistoryHtmlTableVP());
+			table_htmlTable_0().performTest(Rainy1HtmlTableVP());
 
 			// click logout button
 			((GuiTestObject)link_logout().find()).click();
 			
 		}else if (RAINY2){
-			browser_htmlBrowser().performTest(Rainy2UpdatePanelStatusAndHistoryVP());
-			table_htmlTable_0().performTest(Rainy2UpdatePanelStatusAndHistoryHtmlTableVP());
+			browser_htmlBrowser().performTest(Rainy2BrowserVP());
+			table_htmlTable_0().performTest(Rainy2HtmlTableVP());
 
 			// click logout button
 			((GuiTestObject)link_logout().find()).click();
@@ -115,9 +115,9 @@ public class STC07_UpdatePanelStatusAndHistory extends STC07_UpdatePanelStatusAn
 			
 		
 			// Verification point #1
-			browser_htmlBrowser().performTest(Rainy3UpdatePanelStatusAndHistoryBrowserVP());
+			browser_htmlBrowser().performTest(Rainy3BrowserVP());
 			// Verification point #2
-			table_htmlTable_1_2().performTest(Rainy3UpdatePanelStatusAndHistoryHtmlTableVP());
+			table_htmlTable_2().performTest(Rainy3HtmlTableVP());
 			
 			
 			// HTML Browser
@@ -137,9 +137,9 @@ public class STC07_UpdatePanelStatusAndHistory extends STC07_UpdatePanelStatusAn
 			((GuiTestObject)link_viewPanel().find()).click();
 			
 			// Verification point #1
-			browser_htmlBrowser().performTest(Rainy3UpdatePanelStatusAndHistoryBrowserVP());
+			browser_htmlBrowser().performTest(Rainy3BrowserVP());
 			// Verification point #2
-			table_htmlTable_1_2().performTest(Rainy3UpdatePanelStatusAndHistoryHtmlTableVP());
+			table_htmlTable_2().performTest(Rainy3HtmlTable2VP());
 			
 		}
 		

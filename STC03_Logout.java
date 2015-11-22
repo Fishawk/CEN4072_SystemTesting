@@ -55,14 +55,14 @@ public class STC03_Logout extends STC03_LogoutHelper {
 			((GuiTestObject) link_logout().find()).click();
 			
 			//Verification Point 
-			browser_htmlBrowser().performTest(SuccessfulLogoutVP());
+			browser_htmlBrowser().performTest(SunnyBrowserVP());
 		} else if (RAINY1) {
 			
 			// click something not logout
 			link_administer().click();
 
 			//Verification Point 
-			browser_htmlBrowser().performTest(FailedLogout1VP());
+			browser_htmlBrowser().performTest(Rainy1BrowserVP());
 
 		} else if (RAINY2) {
 			
@@ -70,14 +70,14 @@ public class STC03_Logout extends STC03_LogoutHelper {
 			link_editPanelistProfile2().click();
 
 			//Verification Point 
-			browser_htmlBrowser().performTest(FailedLogout2VP());
+			browser_htmlBrowser().performTest(Rainy2BrowserVP());
 		} else if (RAINY3) {
 			
 			// click something not logout
 			link_searchForPanelists().click();
 
 			//Verification Point 
-			browser_htmlBrowser().performTest(FailedLogout3VP());
+			browser_htmlBrowser().performTest(Rainy3BrowserVP());
 		}
 
 		browser_htmlBrowser(document_iscControlSystem2(), DEFAULT_FLAGS)

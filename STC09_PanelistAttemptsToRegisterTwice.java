@@ -25,7 +25,7 @@ public class STC09_PanelistAttemptsToRegisterTwice extends
 	 * Build 9600 ()
 	 * 
 	 * @since 2015/10/18
-	 * @author Princ_000
+	 * @author John Burke
 	 */
 	public void testMain(Object[] args) {
 
@@ -140,17 +140,17 @@ public class STC09_PanelistAttemptsToRegisterTwice extends
 		button_registersubmit().click();
 		if (SUNNY) {
 			// verification point #1
-			browser_htmlBrowser().performTest(SunnyRegisterTwiceBrowserVP());
+			browser_htmlBrowser().performTest(SunnyBrowserVP());
 
 			// verification point #2
-			table_htmlTable_2().performTest(SunnyRegisterTwiceHtmlTablegridVP());
+			table_htmlTable_2().performTest(SunnyHtmlTableVP());
 			
 		} else if (RAINY) {
 			// verification point #1
-			browser_htmlBrowser().performTest(RainyRegisterTwiceBrowserVP());
+			browser_htmlBrowser().performTest(RainyBrowserVP());
 
 			// verification point #2
-			table_htmlTable_1().performTest(RainyRegisterTwiceHtmlTableVP());
+			table_htmlTable_1().performTest(RainyHtmlTableVP());
 			
 		}
 

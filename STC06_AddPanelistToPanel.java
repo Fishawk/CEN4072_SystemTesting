@@ -43,13 +43,13 @@ public class STC06_AddPanelistToPanel extends STC06_AddPanelistToPanelHelper {
 			SetDB.registerPanelist((3 + index), // user ID starts at '4' 
 					dpString("Fname " + index), // first name
 					dpString("Lname " + index), // last name
-					dpString("username " + index), // username
-					dpString("password " + index), // password
+					dpString("Username " + index), // username
+					dpString("Password " + index), // password
 					dpString("Institution " + index), // Institution
 					dpString("Address " + index), // Address
-					dpString("city " + index), // City
+					dpString("City " + index), // City
 					dpString("State " + index), // State
-					dpString("zip " + index), // ZipCode
+					dpString("Zip " + index), // ZipCode
 					dpString("Telephone " + index), // Telephone
 					dpString("Email " + index), // Email
 					dpString("Gender " + index), // Gender
@@ -107,25 +107,25 @@ public class STC06_AddPanelistToPanel extends STC06_AddPanelistToPanelHelper {
 			((GuiTestObject) button_addToPanelsubmit().find()).click();
 			
 			// verification point
-			browser_htmlBrowser().performTest(SunnyAddPanelistToPanelVP());
+			browser_htmlBrowser().performTest(SunnyBrowserVP());
 			
 		} else if (RAINY1) {
 			// make sure an admin cannot add panelist to a panel
 			// verification point #1
-			browser_htmlBrowser().performTest(Rainy1AddPanelistToPanelsVP());
+			browser_htmlBrowser().performTest(Rainy1BrowserVP());
 			
 			//Verification point #2
 			table_htmlTable_0().performTest(
-					Rainy1AddPanelistToPanel_HtmlTableVP());
+					Rainy1HtmlTableVP());
 
 		} else if (RAINY2) {
 			// make sure a panelist cannot add panelist to a panel
 			// verification point #1
-			browser_htmlBrowser().performTest(Rainy2AddPanelistToPanelVP());
+			browser_htmlBrowser().performTest(Rainy2BrowserVP());
 			
 			// verification point #1
 			table_htmlTable_0().performTest(
-					Rainy2AddPanelistToPanelHtmlTableVP());
+					Rainy2HtmlTableVP());
 
 		} else if (RAINY3) {
 			// try to add a panelist to two different panels
@@ -153,9 +153,9 @@ public class STC06_AddPanelistToPanel extends STC06_AddPanelistToPanelHelper {
 			((GuiTestObject) button_addToPanelsubmit().find()).click();
 			
 			// verification point #1
-			browser_htmlBrowser().performTest(Rainy3AddPanelistToPanelVP());
+			browser_htmlBrowser().performTest(Rainy3BrowserVP());
 			// verification point #2
-			table_htmlTable_2().performTest(Rainy3AddPanelistToPanelHtmlTableVP());
+			table_htmlTable_2().performTest(Rainy3HtmlTableVP());
 			
 		}
 

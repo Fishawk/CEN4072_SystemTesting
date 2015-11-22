@@ -20,11 +20,11 @@ import com.rational.test.ft.vp.IFtVerificationPoint;
 import com.ibm.rational.test.ft.object.interfaces.sapwebportal.*;
 /**
  * Script Name   : <b>STC07_UpdatePanelStatusAndHistory</b><br>
- * Generated     : <b>2015/11/20 2:34:47 PM</b><br>
+ * Generated     : <b>2015/11/22 2:37:42 AM</b><br>
  * Description   : Helper class for script<br>
  * Original Host : Windows 8.1 x86 6.3 <br>
  * 
- * @since  November 20, 2015
+ * @since  November 22, 2015
  * @author John
  */
 public abstract class STC07_UpdatePanelStatusAndHistoryHelper extends RationalTestScript
@@ -217,8 +217,8 @@ public abstract class STC07_UpdatePanelStatusAndHistoryHelper extends RationalTe
 	/**
 	 * DisplayMyPanels: with default state.
 	 *		.text : Display My Panels
-	 * 		.href : http://localhost:8080/International_Science_Consortium/displayPanels.jsp
 	 * 		.id : 
+	 * 		.href : http://localhost:8080/International_Science_Consortium/displayPanels.jsp
 	 * 		.title : 
 	 * 		.class : Html.A
 	 * 		.name : 
@@ -232,8 +232,8 @@ public abstract class STC07_UpdatePanelStatusAndHistoryHelper extends RationalTe
 	/**
 	 * DisplayMyPanels: with specific test context and state.
 	 *		.text : Display My Panels
-	 * 		.href : http://localhost:8080/International_Science_Consortium/displayPanels.jsp
 	 * 		.id : 
+	 * 		.href : http://localhost:8080/International_Science_Consortium/displayPanels.jsp
 	 * 		.title : 
 	 * 		.class : Html.A
 	 * 		.name : 
@@ -248,8 +248,8 @@ public abstract class STC07_UpdatePanelStatusAndHistoryHelper extends RationalTe
 	/**
 	 * Logout: with default state.
 	 *		.text : Logout
-	 * 		.href : http://localhost:8080/International_Science_Consortium/logout
 	 * 		.id : 
+	 * 		.href : http://localhost:8080/International_Science_Consortium/logout
 	 * 		.title : 
 	 * 		.class : Html.A
 	 * 		.name : 
@@ -263,8 +263,8 @@ public abstract class STC07_UpdatePanelStatusAndHistoryHelper extends RationalTe
 	/**
 	 * Logout: with specific test context and state.
 	 *		.text : Logout
-	 * 		.href : http://localhost:8080/International_Science_Consortium/logout
 	 * 		.id : 
+	 * 		.href : http://localhost:8080/International_Science_Consortium/logout
 	 * 		.title : 
 	 * 		.class : Html.A
 	 * 		.name : 
@@ -279,8 +279,8 @@ public abstract class STC07_UpdatePanelStatusAndHistoryHelper extends RationalTe
 	/**
 	 * ViewPanel: with default state.
 	 *		.text : View Panel
-	 * 		.href : http://localhost:8080/International_Science_Consortium/displayPanel.jsp?panelID= ...
 	 * 		.id : 
+	 * 		.href : http://localhost:8080/International_Science_Consortium/displayPanel.jsp?panelID= ...
 	 * 		.title : 
 	 * 		.class : Html.A
 	 * 		.name : 
@@ -294,8 +294,8 @@ public abstract class STC07_UpdatePanelStatusAndHistoryHelper extends RationalTe
 	/**
 	 * ViewPanel: with specific test context and state.
 	 *		.text : View Panel
-	 * 		.href : http://localhost:8080/International_Science_Consortium/displayPanel.jsp?panelID= ...
 	 * 		.id : 
+	 * 		.href : http://localhost:8080/International_Science_Consortium/displayPanel.jsp?panelID= ...
 	 * 		.title : 
 	 * 		.class : Html.A
 	 * 		.name : 
@@ -418,6 +418,33 @@ public abstract class STC07_UpdatePanelStatusAndHistoryHelper extends RationalTe
 	}
 	
 	/**
+	 * HtmlTable_2: with default state.
+	 *		.id : 
+	 * 		.title : 
+	 * 		.class : Html.TABLE
+	 * 		.caption : 
+	 * 		.classIndex : 2
+	 */
+	protected StatelessGuiSubitemTestObject table_htmlTable_2() 
+	{
+		return new StatelessGuiSubitemTestObject(
+                        getMappedTestObject("table_htmlTable_2"));
+	}
+	/**
+	 * HtmlTable_2: with specific test context and state.
+	 *		.id : 
+	 * 		.title : 
+	 * 		.class : Html.TABLE
+	 * 		.caption : 
+	 * 		.classIndex : 2
+	 */
+	protected StatelessGuiSubitemTestObject table_htmlTable_2(TestObject anchor, long flags) 
+	{
+		return new StatelessGuiSubitemTestObject(
+                        getMappedTestObject("table_htmlTable_2"), anchor, flags);
+	}
+	
+	/**
 	 * password: with default state.
 	 *		.id : 
 	 * 		.type : password
@@ -503,99 +530,111 @@ public abstract class STC07_UpdatePanelStatusAndHistoryHelper extends RationalTe
 	}
 	
 	/**
-	 * Locate and return the verification point Rainy1UpdatePanelStatusAndHistory object in the SUT.
+	 * Locate and return the verification point Rainy1Browser object in the SUT.
 	 */
-	protected IFtVerificationPoint Rainy1UpdatePanelStatusAndHistoryVP() 
+	protected IFtVerificationPoint Rainy1BrowserVP() 
 	{
-		return vp("Rainy1UpdatePanelStatusAndHistory");
+		return vp("Rainy1Browser");
 	}
-	protected IFtVerificationPoint Rainy1UpdatePanelStatusAndHistoryVP(TestObject anchor)
+	protected IFtVerificationPoint Rainy1BrowserVP(TestObject anchor)
 	{
-		return vp("Rainy1UpdatePanelStatusAndHistory", anchor);
+		return vp("Rainy1Browser", anchor);
 	}
 	
 	/**
-	 * Locate and return the verification point Rainy1UpdatePanelStatusAndHistoryHtmlTable object in the SUT.
+	 * Locate and return the verification point Rainy1HtmlTable object in the SUT.
 	 */
-	protected IFtVerificationPoint Rainy1UpdatePanelStatusAndHistoryHtmlTableVP() 
+	protected IFtVerificationPoint Rainy1HtmlTableVP() 
 	{
-		return vp("Rainy1UpdatePanelStatusAndHistoryHtmlTable");
+		return vp("Rainy1HtmlTable");
 	}
-	protected IFtVerificationPoint Rainy1UpdatePanelStatusAndHistoryHtmlTableVP(TestObject anchor)
+	protected IFtVerificationPoint Rainy1HtmlTableVP(TestObject anchor)
 	{
-		return vp("Rainy1UpdatePanelStatusAndHistoryHtmlTable", anchor);
+		return vp("Rainy1HtmlTable", anchor);
 	}
 	
 	/**
-	 * Locate and return the verification point Rainy2UpdatePanelStatusAndHistory object in the SUT.
+	 * Locate and return the verification point Rainy2Browser object in the SUT.
 	 */
-	protected IFtVerificationPoint Rainy2UpdatePanelStatusAndHistoryVP() 
+	protected IFtVerificationPoint Rainy2BrowserVP() 
 	{
-		return vp("Rainy2UpdatePanelStatusAndHistory");
+		return vp("Rainy2Browser");
 	}
-	protected IFtVerificationPoint Rainy2UpdatePanelStatusAndHistoryVP(TestObject anchor)
+	protected IFtVerificationPoint Rainy2BrowserVP(TestObject anchor)
 	{
-		return vp("Rainy2UpdatePanelStatusAndHistory", anchor);
+		return vp("Rainy2Browser", anchor);
 	}
 	
 	/**
-	 * Locate and return the verification point Rainy2UpdatePanelStatusAndHistoryHtmlTable object in the SUT.
+	 * Locate and return the verification point Rainy2HtmlTable object in the SUT.
 	 */
-	protected IFtVerificationPoint Rainy2UpdatePanelStatusAndHistoryHtmlTableVP() 
+	protected IFtVerificationPoint Rainy2HtmlTableVP() 
 	{
-		return vp("Rainy2UpdatePanelStatusAndHistoryHtmlTable");
+		return vp("Rainy2HtmlTable");
 	}
-	protected IFtVerificationPoint Rainy2UpdatePanelStatusAndHistoryHtmlTableVP(TestObject anchor)
+	protected IFtVerificationPoint Rainy2HtmlTableVP(TestObject anchor)
 	{
-		return vp("Rainy2UpdatePanelStatusAndHistoryHtmlTable", anchor);
+		return vp("Rainy2HtmlTable", anchor);
 	}
 	
 	/**
-	 * Locate and return the verification point Rainy3UpdatePanelStatusAndHistoryBrowser object in the SUT.
+	 * Locate and return the verification point Rainy3Browser object in the SUT.
 	 */
-	protected IFtVerificationPoint Rainy3UpdatePanelStatusAndHistoryBrowserVP() 
+	protected IFtVerificationPoint Rainy3BrowserVP() 
 	{
-		return vp("Rainy3UpdatePanelStatusAndHistoryBrowser");
+		return vp("Rainy3Browser");
 	}
-	protected IFtVerificationPoint Rainy3UpdatePanelStatusAndHistoryBrowserVP(TestObject anchor)
+	protected IFtVerificationPoint Rainy3BrowserVP(TestObject anchor)
 	{
-		return vp("Rainy3UpdatePanelStatusAndHistoryBrowser", anchor);
+		return vp("Rainy3Browser", anchor);
 	}
 	
 	/**
-	 * Locate and return the verification point Rainy3UpdatePanelStatusAndHistoryHtmlTable object in the SUT.
+	 * Locate and return the verification point Rainy3HtmlTable object in the SUT.
 	 */
-	protected IFtVerificationPoint Rainy3UpdatePanelStatusAndHistoryHtmlTableVP() 
+	protected IFtVerificationPoint Rainy3HtmlTableVP() 
 	{
-		return vp("Rainy3UpdatePanelStatusAndHistoryHtmlTable");
+		return vp("Rainy3HtmlTable");
 	}
-	protected IFtVerificationPoint Rainy3UpdatePanelStatusAndHistoryHtmlTableVP(TestObject anchor)
+	protected IFtVerificationPoint Rainy3HtmlTableVP(TestObject anchor)
 	{
-		return vp("Rainy3UpdatePanelStatusAndHistoryHtmlTable", anchor);
+		return vp("Rainy3HtmlTable", anchor);
 	}
 	
 	/**
-	 * Locate and return the verification point SunnyUpdatePanelStatusAndHistory object in the SUT.
+	 * Locate and return the verification point Rainy3HtmlTable2 object in the SUT.
 	 */
-	protected IFtVerificationPoint SunnyUpdatePanelStatusAndHistoryVP() 
+	protected IFtVerificationPoint Rainy3HtmlTable2VP() 
 	{
-		return vp("SunnyUpdatePanelStatusAndHistory");
+		return vp("Rainy3HtmlTable2");
 	}
-	protected IFtVerificationPoint SunnyUpdatePanelStatusAndHistoryVP(TestObject anchor)
+	protected IFtVerificationPoint Rainy3HtmlTable2VP(TestObject anchor)
 	{
-		return vp("SunnyUpdatePanelStatusAndHistory", anchor);
+		return vp("Rainy3HtmlTable2", anchor);
 	}
 	
 	/**
-	 * Locate and return the verification point SunnyUpdatePanelStatusAndHistoryHtmlTable object in the SUT.
+	 * Locate and return the verification point SunnyBrowser object in the SUT.
 	 */
-	protected IFtVerificationPoint SunnyUpdatePanelStatusAndHistoryHtmlTableVP() 
+	protected IFtVerificationPoint SunnyBrowserVP() 
 	{
-		return vp("SunnyUpdatePanelStatusAndHistoryHtmlTable");
+		return vp("SunnyBrowser");
 	}
-	protected IFtVerificationPoint SunnyUpdatePanelStatusAndHistoryHtmlTableVP(TestObject anchor)
+	protected IFtVerificationPoint SunnyBrowserVP(TestObject anchor)
 	{
-		return vp("SunnyUpdatePanelStatusAndHistoryHtmlTable", anchor);
+		return vp("SunnyBrowser", anchor);
+	}
+	
+	/**
+	 * Locate and return the verification point SunnyHtmlTable object in the SUT.
+	 */
+	protected IFtVerificationPoint SunnyHtmlTableVP() 
+	{
+		return vp("SunnyHtmlTable");
+	}
+	protected IFtVerificationPoint SunnyHtmlTableVP(TestObject anchor)
+	{
+		return vp("SunnyHtmlTable", anchor);
 	}
 	
 	

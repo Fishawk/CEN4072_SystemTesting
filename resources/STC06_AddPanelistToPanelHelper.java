@@ -20,11 +20,11 @@ import com.rational.test.ft.vp.IFtVerificationPoint;
 import com.ibm.rational.test.ft.object.interfaces.sapwebportal.*;
 /**
  * Script Name   : <b>STC06_AddPanelistToPanel</b><br>
- * Generated     : <b>2015/11/18 8:10:26 AM</b><br>
+ * Generated     : <b>2015/11/22 2:39:36 AM</b><br>
  * Description   : Helper class for script<br>
  * Original Host : Windows 8.1 x86 6.3 <br>
  * 
- * @since  November 18, 2015
+ * @since  November 22, 2015
  * @author John
  */
 public abstract class STC06_AddPanelistToPanelHelper extends RationalTestScript
@@ -341,8 +341,8 @@ public abstract class STC06_AddPanelistToPanelHelper extends RationalTestScript
 	/**
 	 * HtmlTable_2: with default state.
 	 *		.id : 
-	 * 		.class : Html.TABLE
 	 * 		.title : 
+	 * 		.class : Html.TABLE
 	 * 		.caption : 
 	 * 		.classIndex : 2
 	 */
@@ -354,8 +354,8 @@ public abstract class STC06_AddPanelistToPanelHelper extends RationalTestScript
 	/**
 	 * HtmlTable_2: with specific test context and state.
 	 *		.id : 
-	 * 		.class : Html.TABLE
 	 * 		.title : 
+	 * 		.class : Html.TABLE
 	 * 		.caption : 
 	 * 		.classIndex : 2
 	 */
@@ -772,87 +772,87 @@ public abstract class STC06_AddPanelistToPanelHelper extends RationalTestScript
 	}
 	
 	/**
-	 * Locate and return the verification point Rainy1AddPanelistToPanels object in the SUT.
+	 * Locate and return the verification point Rainy1Browser object in the SUT.
 	 */
-	protected IFtVerificationPoint Rainy1AddPanelistToPanelsVP() 
+	protected IFtVerificationPoint Rainy1BrowserVP() 
 	{
-		return vp("Rainy1AddPanelistToPanels");
+		return vp("Rainy1Browser");
 	}
-	protected IFtVerificationPoint Rainy1AddPanelistToPanelsVP(TestObject anchor)
+	protected IFtVerificationPoint Rainy1BrowserVP(TestObject anchor)
 	{
-		return vp("Rainy1AddPanelistToPanels", anchor);
+		return vp("Rainy1Browser", anchor);
 	}
 	
 	/**
-	 * Locate and return the verification point Rainy1AddPanelistToPanel_HtmlTable object in the SUT.
+	 * Locate and return the verification point Rainy1HtmlTable object in the SUT.
 	 */
-	protected IFtVerificationPoint Rainy1AddPanelistToPanel_HtmlTableVP() 
+	protected IFtVerificationPoint Rainy1HtmlTableVP() 
 	{
-		return vp("Rainy1AddPanelistToPanel_HtmlTable");
+		return vp("Rainy1HtmlTable");
 	}
-	protected IFtVerificationPoint Rainy1AddPanelistToPanel_HtmlTableVP(TestObject anchor)
+	protected IFtVerificationPoint Rainy1HtmlTableVP(TestObject anchor)
 	{
-		return vp("Rainy1AddPanelistToPanel_HtmlTable", anchor);
+		return vp("Rainy1HtmlTable", anchor);
 	}
 	
 	/**
-	 * Locate and return the verification point Rainy2AddPanelistToPanel object in the SUT.
+	 * Locate and return the verification point Rainy2Browser object in the SUT.
 	 */
-	protected IFtVerificationPoint Rainy2AddPanelistToPanelVP() 
+	protected IFtVerificationPoint Rainy2BrowserVP() 
 	{
-		return vp("Rainy2AddPanelistToPanel");
+		return vp("Rainy2Browser");
 	}
-	protected IFtVerificationPoint Rainy2AddPanelistToPanelVP(TestObject anchor)
+	protected IFtVerificationPoint Rainy2BrowserVP(TestObject anchor)
 	{
-		return vp("Rainy2AddPanelistToPanel", anchor);
+		return vp("Rainy2Browser", anchor);
 	}
 	
 	/**
-	 * Locate and return the verification point Rainy2AddPanelistToPanelHtmlTable object in the SUT.
+	 * Locate and return the verification point Rainy2HtmlTable object in the SUT.
 	 */
-	protected IFtVerificationPoint Rainy2AddPanelistToPanelHtmlTableVP() 
+	protected IFtVerificationPoint Rainy2HtmlTableVP() 
 	{
-		return vp("Rainy2AddPanelistToPanelHtmlTable");
+		return vp("Rainy2HtmlTable");
 	}
-	protected IFtVerificationPoint Rainy2AddPanelistToPanelHtmlTableVP(TestObject anchor)
+	protected IFtVerificationPoint Rainy2HtmlTableVP(TestObject anchor)
 	{
-		return vp("Rainy2AddPanelistToPanelHtmlTable", anchor);
+		return vp("Rainy2HtmlTable", anchor);
 	}
 	
 	/**
-	 * Locate and return the verification point Rainy3AddPanelistToPanel object in the SUT.
+	 * Locate and return the verification point Rainy3Browser object in the SUT.
 	 */
-	protected IFtVerificationPoint Rainy3AddPanelistToPanelVP() 
+	protected IFtVerificationPoint Rainy3BrowserVP() 
 	{
-		return vp("Rainy3AddPanelistToPanel");
+		return vp("Rainy3Browser");
 	}
-	protected IFtVerificationPoint Rainy3AddPanelistToPanelVP(TestObject anchor)
+	protected IFtVerificationPoint Rainy3BrowserVP(TestObject anchor)
 	{
-		return vp("Rainy3AddPanelistToPanel", anchor);
+		return vp("Rainy3Browser", anchor);
 	}
 	
 	/**
-	 * Locate and return the verification point Rainy3AddPanelistToPanelHtmlTable object in the SUT.
+	 * Locate and return the verification point Rainy3HtmlTable object in the SUT.
 	 */
-	protected IFtVerificationPoint Rainy3AddPanelistToPanelHtmlTableVP() 
+	protected IFtVerificationPoint Rainy3HtmlTableVP() 
 	{
-		return vp("Rainy3AddPanelistToPanelHtmlTable");
+		return vp("Rainy3HtmlTable");
 	}
-	protected IFtVerificationPoint Rainy3AddPanelistToPanelHtmlTableVP(TestObject anchor)
+	protected IFtVerificationPoint Rainy3HtmlTableVP(TestObject anchor)
 	{
-		return vp("Rainy3AddPanelistToPanelHtmlTable", anchor);
+		return vp("Rainy3HtmlTable", anchor);
 	}
 	
 	/**
-	 * Locate and return the verification point SunnyAddPanelistToPanel object in the SUT.
+	 * Locate and return the verification point SunnyBrowser object in the SUT.
 	 */
-	protected IFtVerificationPoint SunnyAddPanelistToPanelVP() 
+	protected IFtVerificationPoint SunnyBrowserVP() 
 	{
-		return vp("SunnyAddPanelistToPanel");
+		return vp("SunnyBrowser");
 	}
-	protected IFtVerificationPoint SunnyAddPanelistToPanelVP(TestObject anchor)
+	protected IFtVerificationPoint SunnyBrowserVP(TestObject anchor)
 	{
-		return vp("SunnyAddPanelistToPanel", anchor);
+		return vp("SunnyBrowser", anchor);
 	}
 	
 	

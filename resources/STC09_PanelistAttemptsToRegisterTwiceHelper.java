@@ -20,11 +20,11 @@ import com.rational.test.ft.vp.IFtVerificationPoint;
 import com.ibm.rational.test.ft.object.interfaces.sapwebportal.*;
 /**
  * Script Name   : <b>STC09_PanelistAttemptsToRegisterTwice</b><br>
- * Generated     : <b>2015/11/18 7:37:26 PM</b><br>
+ * Generated     : <b>2015/11/22 2:23:58 AM</b><br>
  * Description   : Helper class for script<br>
  * Original Host : Windows 8.1 x86 6.3 <br>
  * 
- * @since  November 18, 2015
+ * @since  November 22, 2015
  * @author John
  */
 public abstract class STC09_PanelistAttemptsToRegisterTwiceHelper extends RationalTestScript
@@ -198,8 +198,8 @@ public abstract class STC09_PanelistAttemptsToRegisterTwiceHelper extends Ration
 	/**
 	 * HtmlTable_1: with default state.
 	 *		.id : 
-	 * 		.class : Html.TABLE
 	 * 		.title : 
+	 * 		.class : Html.TABLE
 	 * 		.caption : 
 	 * 		.classIndex : 1
 	 */
@@ -211,8 +211,8 @@ public abstract class STC09_PanelistAttemptsToRegisterTwiceHelper extends Ration
 	/**
 	 * HtmlTable_1: with specific test context and state.
 	 *		.id : 
-	 * 		.class : Html.TABLE
 	 * 		.title : 
+	 * 		.class : Html.TABLE
 	 * 		.caption : 
 	 * 		.classIndex : 1
 	 */
@@ -627,51 +627,51 @@ public abstract class STC09_PanelistAttemptsToRegisterTwiceHelper extends Ration
 	}
 	
 	/**
-	 * Locate and return the verification point RainyRegisterTwiceBrowser object in the SUT.
+	 * Locate and return the verification point RainyBrowser object in the SUT.
 	 */
-	protected IFtVerificationPoint RainyRegisterTwiceBrowserVP() 
+	protected IFtVerificationPoint RainyBrowserVP() 
 	{
-		return vp("RainyRegisterTwiceBrowser");
+		return vp("RainyBrowser");
 	}
-	protected IFtVerificationPoint RainyRegisterTwiceBrowserVP(TestObject anchor)
+	protected IFtVerificationPoint RainyBrowserVP(TestObject anchor)
 	{
-		return vp("RainyRegisterTwiceBrowser", anchor);
+		return vp("RainyBrowser", anchor);
 	}
 	
 	/**
-	 * Locate and return the verification point RainyRegisterTwiceHtmlTable object in the SUT.
+	 * Locate and return the verification point RainyHtmlTable object in the SUT.
 	 */
-	protected IFtVerificationPoint RainyRegisterTwiceHtmlTableVP() 
+	protected IFtVerificationPoint RainyHtmlTableVP() 
 	{
-		return vp("RainyRegisterTwiceHtmlTable");
+		return vp("RainyHtmlTable");
 	}
-	protected IFtVerificationPoint RainyRegisterTwiceHtmlTableVP(TestObject anchor)
+	protected IFtVerificationPoint RainyHtmlTableVP(TestObject anchor)
 	{
-		return vp("RainyRegisterTwiceHtmlTable", anchor);
+		return vp("RainyHtmlTable", anchor);
 	}
 	
 	/**
-	 * Locate and return the verification point SunnyRegisterTwiceBrowser object in the SUT.
+	 * Locate and return the verification point SunnyBrowser object in the SUT.
 	 */
-	protected IFtVerificationPoint SunnyRegisterTwiceBrowserVP() 
+	protected IFtVerificationPoint SunnyBrowserVP() 
 	{
-		return vp("SunnyRegisterTwiceBrowser");
+		return vp("SunnyBrowser");
 	}
-	protected IFtVerificationPoint SunnyRegisterTwiceBrowserVP(TestObject anchor)
+	protected IFtVerificationPoint SunnyBrowserVP(TestObject anchor)
 	{
-		return vp("SunnyRegisterTwiceBrowser", anchor);
+		return vp("SunnyBrowser", anchor);
 	}
 	
 	/**
-	 * Locate and return the verification point SunnyRegisterTwiceHtmlTablegrid object in the SUT.
+	 * Locate and return the verification point SunnyHtmlTable object in the SUT.
 	 */
-	protected IFtVerificationPoint SunnyRegisterTwiceHtmlTablegridVP() 
+	protected IFtVerificationPoint SunnyHtmlTableVP() 
 	{
-		return vp("SunnyRegisterTwiceHtmlTablegrid");
+		return vp("SunnyHtmlTable");
 	}
-	protected IFtVerificationPoint SunnyRegisterTwiceHtmlTablegridVP(TestObject anchor)
+	protected IFtVerificationPoint SunnyHtmlTableVP(TestObject anchor)
 	{
-		return vp("SunnyRegisterTwiceHtmlTablegrid", anchor);
+		return vp("SunnyHtmlTable", anchor);
 	}
 	
 	
