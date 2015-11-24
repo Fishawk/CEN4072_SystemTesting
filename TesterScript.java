@@ -62,14 +62,14 @@ public class TesterScript extends TesterScriptHelper
 					dpString("PanelName " +index) , 
 					dpString("PanelDescription " + index++));
 		}
-		
+/*		
 		// add panelist to panel
 		index = 1;
 		while(dpString("AddPanelist " + index).equalsIgnoreCase("True")){
 			SetDB.addPanelistToPanel((999 + index),(2 + index));
 			index++;
 		}
-		
+*/		
 //		SetDB.resetDB(false);
 	}
 }

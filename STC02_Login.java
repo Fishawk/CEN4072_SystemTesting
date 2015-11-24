@@ -20,37 +20,40 @@ import com.ibm.rational.test.ft.object.interfaces.sapwebportal.*;
 public class STC02_Login extends STC02_LoginHelper {
 	
 	public void testMain(Object[] args) {
-		
+
 		// reset the database
 		SetDB.resetDB(false);
+		
+		// WHo is Who
+		final boolean SUNNY = dpString("TestType").equalsIgnoreCase("Sunny");
+		final boolean RAINY = dpString("TestType").equalsIgnoreCase("Rainy");
 
 		// HTML Browser
 		// Document: ISC Control System:
-		// http://localhost:8080/International_Science_Consortium/
 		startApp("http://localhost:8080/International_Science_Consortium/");
 		
 		// find and enter username 
 		((TextGuiTestObject) text_username().find()).click();
 		//text_username().click();
 		browser_htmlBrowser(document_iscControlSystem(), DEFAULT_FLAGS)
-				.inputChars(dpString("username"));
+				.inputChars(dpString("Username"));
 		
 		// Find and enter password 
 		((GuiTestObject) text_password().find()).click();
 		browser_htmlBrowser(document_iscControlSystem(), DEFAULT_FLAGS)
-				.inputChars(dpString("password"));
+				.inputChars(dpString("Password"));
 		
 		// Click login
 		button_logInsubmit().click();
 
 		//Verification Point 
-		if (dpString("TestType").equalsIgnoreCase("Sunny")) {
+		if (SUNNY) {
 			// verification point
 			browser_htmlBrowser().performTest(SunnyLoginVP());
 			
 			// Logout
 			((GuiTestObject) link_logout().find()).click();
-		} else if (dpString("TestType").equalsIgnoreCase("Rainy")) {
+		} else if (RAINY) {
 			// verification point
 			browser_htmlBrowser().performTest(FailedLoginVP());
 		}
