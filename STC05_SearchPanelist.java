@@ -88,41 +88,41 @@ public class STC05_SearchPanelist extends STC05_SearchPanelistHelper {
 				} else if (index == 7) {
 					((TextGuiTestObject) text_pInstitution().find()).click();
 					browser_htmlBrowser(document_iscControlSystem2(),
-							DEFAULT_FLAGS).inputChars("FIU");
+							DEFAULT_FLAGS).inputChars(dpString("Institution"));
 					
 				} else if (index == 6) {
 					((TextGuiTestObject) text_pAddress().find()).click();
 					browser_htmlBrowser(document_iscControlSystem2(),
-							DEFAULT_FLAGS).inputChars("ADD");
+							DEFAULT_FLAGS).inputChars(dpString("Address"));
 					
 				} else if (index == 5) {
 					((TextGuiTestObject) text_pCity().find()).click();
 					browser_htmlBrowser(document_iscControlSystem2(),
-							DEFAULT_FLAGS).inputChars("CIT");
+							DEFAULT_FLAGS).inputChars(dpString("City"));
 					
 				} else if (index == 4) {
 					((TextGuiTestObject) text_pState().find()).click();
 					browser_htmlBrowser(document_iscControlSystem2(),
-							DEFAULT_FLAGS).inputChars("ST");
+							DEFAULT_FLAGS).inputChars(dpString("State"));
 					
 				} else if (index == 3) {
 					((TextGuiTestObject) text_pZip().find()).click();
 					browser_htmlBrowser(document_iscControlSystem2(),
-							DEFAULT_FLAGS).inputChars("Z");
+							DEFAULT_FLAGS).inputChars(dpString("Zip"));
 				
 				} else if (index == 2) {
 					((GuiTestObject) list_pGender().find()).click();
-					list_pGender().click(atText("Male"));
+					list_pGender().click(atText(dpString("Gender")));
 					
 				} else if (index == 1) {
 					((TextGuiTestObject) text_pEthnicity().find()).click();
 					browser_htmlBrowser(document_iscControlSystem2(),
-							DEFAULT_FLAGS).inputChars("WHITE");
+							DEFAULT_FLAGS).inputChars(dpString("Ethnicity"));
 					
 				} else if (index == 0) {
 					((TextGuiTestObject) text_pExpertise().find()).click();
 					browser_htmlBrowser(document_iscControlSystem2(),
-							DEFAULT_FLAGS).inputChars("C S");
+							DEFAULT_FLAGS).inputChars(dpString("Expertise"));
 					
 				}
 				
