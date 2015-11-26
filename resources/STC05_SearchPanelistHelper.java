@@ -20,11 +20,11 @@ import com.rational.test.ft.vp.IFtVerificationPoint;
 import com.ibm.rational.test.ft.object.interfaces.sapwebportal.*;
 /**
  * Script Name   : <b>STC05_SearchPanelist</b><br>
- * Generated     : <b>2015/10/26 2:51:36 PM</b><br>
+ * Generated     : <b>2015/11/25 10:00:25 PM</b><br>
  * Description   : Helper class for script<br>
  * Original Host : Windows 8.1 x86 6.3 <br>
  * 
- * @since  October 26, 2015
+ * @since  November 25, 2015
  * @author John
  */
 public abstract class STC05_SearchPanelistHelper extends RationalTestScript
@@ -57,8 +57,8 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	 *		.id : 
 	 * 		.type : submit
 	 * 		.value : Log In
-	 * 		.class : Html.INPUT.submit
 	 * 		.title : 
+	 * 		.class : Html.INPUT.submit
 	 * 		.name : loginButton
 	 * 		.classIndex : 0
 	 */
@@ -72,8 +72,8 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	 *		.id : 
 	 * 		.type : submit
 	 * 		.value : Log In
-	 * 		.class : Html.INPUT.submit
 	 * 		.title : 
+	 * 		.class : Html.INPUT.submit
 	 * 		.name : loginButton
 	 * 		.classIndex : 0
 	 */
@@ -88,8 +88,8 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	 *		.id : search
 	 * 		.type : submit
 	 * 		.value : Search
-	 * 		.class : Html.INPUT.submit
 	 * 		.title : 
+	 * 		.class : Html.INPUT.submit
 	 * 		.name : search
 	 * 		.classIndex : 0
 	 */
@@ -103,8 +103,8 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	 *		.id : search
 	 * 		.type : submit
 	 * 		.value : Search
-	 * 		.class : Html.INPUT.submit
 	 * 		.title : 
+	 * 		.class : Html.INPUT.submit
 	 * 		.name : search
 	 * 		.classIndex : 0
 	 */
@@ -116,8 +116,8 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	
 	/**
 	 * ISCControlSystem: with default state.
-	 *		.class : Html.HtmlDocument
-	 * 		.title : ISC Control System
+	 *		.title : ISC Control System
+	 * 		.class : Html.HtmlDocument
 	 * 		.url : http://localhost:8080/International_Science_Consortium/
 	 */
 	protected DocumentTestObject document_iscControlSystem() 
@@ -127,8 +127,8 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	}
 	/**
 	 * ISCControlSystem: with specific test context and state.
-	 *		.class : Html.HtmlDocument
-	 * 		.title : ISC Control System
+	 *		.title : ISC Control System
+	 * 		.class : Html.HtmlDocument
 	 * 		.url : http://localhost:8080/International_Science_Consortium/
 	 */
 	protected DocumentTestObject document_iscControlSystem(TestObject anchor, long flags) 
@@ -139,8 +139,8 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	
 	/**
 	 * ISCControlSystem: with default state.
-	 *		.class : Html.HtmlDocument
-	 * 		.title : ISC Control System
+	 *		.title : ISC Control System
+	 * 		.class : Html.HtmlDocument
 	 * 		.url : http://localhost:8080/International_Science_Consortium/searchPanelists.jsp
 	 */
 	protected DocumentTestObject document_iscControlSystem2() 
@@ -150,8 +150,8 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	}
 	/**
 	 * ISCControlSystem: with specific test context and state.
-	 *		.class : Html.HtmlDocument
-	 * 		.title : ISC Control System
+	 *		.title : ISC Control System
+	 * 		.class : Html.HtmlDocument
 	 * 		.url : http://localhost:8080/International_Science_Consortium/searchPanelists.jsp
 	 */
 	protected DocumentTestObject document_iscControlSystem2(TestObject anchor, long flags) 
@@ -162,8 +162,8 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	
 	/**
 	 * ISCControlSystem: with default state.
-	 *		.class : Html.HtmlDocument
-	 * 		.title : ISC Control System
+	 *		.title : ISC Control System
+	 * 		.class : Html.HtmlDocument
 	 * 		.url : http://localhost:8080/International_Science_Consortium/index.jsp
 	 */
 	protected DocumentTestObject document_iscControlSystem3() 
@@ -173,8 +173,8 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	}
 	/**
 	 * ISCControlSystem: with specific test context and state.
-	 *		.class : Html.HtmlDocument
-	 * 		.title : ISC Control System
+	 *		.title : ISC Control System
+	 * 		.class : Html.HtmlDocument
 	 * 		.url : http://localhost:8080/International_Science_Consortium/index.jsp
 	 */
 	protected DocumentTestObject document_iscControlSystem3(TestObject anchor, long flags) 
@@ -186,10 +186,10 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	/**
 	 * Logout: with default state.
 	 *		.text : Logout
-	 * 		.id : 
 	 * 		.href : http://localhost:8080/International_Science_Consortium/logout
-	 * 		.class : Html.A
+	 * 		.id : 
 	 * 		.title : 
+	 * 		.class : Html.A
 	 * 		.name : 
 	 * 		.classIndex : 4
 	 */
@@ -201,10 +201,10 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	/**
 	 * Logout: with specific test context and state.
 	 *		.text : Logout
-	 * 		.id : 
 	 * 		.href : http://localhost:8080/International_Science_Consortium/logout
-	 * 		.class : Html.A
+	 * 		.id : 
 	 * 		.title : 
+	 * 		.class : Html.A
 	 * 		.name : 
 	 * 		.classIndex : 4
 	 */
@@ -217,10 +217,10 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	/**
 	 * SearchForPanelists: with default state.
 	 *		.text : Search for Panelists
-	 * 		.id : 
 	 * 		.href : http://localhost:8080/International_Science_Consortium/searchPanelists.jsp
-	 * 		.class : Html.A
+	 * 		.id : 
 	 * 		.title : 
+	 * 		.class : Html.A
 	 * 		.name : 
 	 * 		.classIndex : 1
 	 */
@@ -232,10 +232,10 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	/**
 	 * SearchForPanelists: with specific test context and state.
 	 *		.text : Search for Panelists
-	 * 		.id : 
 	 * 		.href : http://localhost:8080/International_Science_Consortium/searchPanelists.jsp
-	 * 		.class : Html.A
+	 * 		.id : 
 	 * 		.title : 
+	 * 		.class : Html.A
 	 * 		.name : 
 	 * 		.classIndex : 1
 	 */
@@ -249,8 +249,8 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	 * pGender: with default state.
 	 *		.text : Male Female
 	 * 		.id : pGender
-	 * 		.class : Html.SELECT
 	 * 		.title : 
+	 * 		.class : Html.SELECT
 	 * 		.name : pGender
 	 * 		.classIndex : 0
 	 */
@@ -263,8 +263,8 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	 * pGender: with specific test context and state.
 	 *		.text : Male Female
 	 * 		.id : pGender
-	 * 		.class : Html.SELECT
 	 * 		.title : 
+	 * 		.class : Html.SELECT
 	 * 		.name : pGender
 	 * 		.classIndex : 0
 	 */
@@ -278,8 +278,8 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	 * pAddress: with default state.
 	 *		.id : pAddress
 	 * 		.type : text
-	 * 		.class : Html.INPUT.text
 	 * 		.title : 
+	 * 		.class : Html.INPUT.text
 	 * 		.name : pAddress
 	 * 		.classIndex : 0
 	 */
@@ -292,8 +292,8 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	 * pAddress: with specific test context and state.
 	 *		.id : pAddress
 	 * 		.type : text
-	 * 		.class : Html.INPUT.text
 	 * 		.title : 
+	 * 		.class : Html.INPUT.text
 	 * 		.name : pAddress
 	 * 		.classIndex : 0
 	 */
@@ -307,8 +307,8 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	 * pCity: with default state.
 	 *		.id : pCity
 	 * 		.type : text
-	 * 		.class : Html.INPUT.text
 	 * 		.title : 
+	 * 		.class : Html.INPUT.text
 	 * 		.name : pCity
 	 * 		.classIndex : 0
 	 */
@@ -321,8 +321,8 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	 * pCity: with specific test context and state.
 	 *		.id : pCity
 	 * 		.type : text
-	 * 		.class : Html.INPUT.text
 	 * 		.title : 
+	 * 		.class : Html.INPUT.text
 	 * 		.name : pCity
 	 * 		.classIndex : 0
 	 */
@@ -336,8 +336,8 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	 * pEmail: with default state.
 	 *		.id : pEmail
 	 * 		.type : text
-	 * 		.class : Html.INPUT.text
 	 * 		.title : 
+	 * 		.class : Html.INPUT.text
 	 * 		.name : pEmail
 	 * 		.classIndex : 0
 	 */
@@ -350,8 +350,8 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	 * pEmail: with specific test context and state.
 	 *		.id : pEmail
 	 * 		.type : text
-	 * 		.class : Html.INPUT.text
 	 * 		.title : 
+	 * 		.class : Html.INPUT.text
 	 * 		.name : pEmail
 	 * 		.classIndex : 0
 	 */
@@ -365,8 +365,8 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	 * pEthnicity: with default state.
 	 *		.id : pEthnicity
 	 * 		.type : text
-	 * 		.class : Html.INPUT.text
 	 * 		.title : 
+	 * 		.class : Html.INPUT.text
 	 * 		.name : pEthnicity
 	 * 		.classIndex : 0
 	 */
@@ -379,8 +379,8 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	 * pEthnicity: with specific test context and state.
 	 *		.id : pEthnicity
 	 * 		.type : text
-	 * 		.class : Html.INPUT.text
 	 * 		.title : 
+	 * 		.class : Html.INPUT.text
 	 * 		.name : pEthnicity
 	 * 		.classIndex : 0
 	 */
@@ -394,8 +394,8 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	 * pExpertise: with default state.
 	 *		.id : pExpertise
 	 * 		.type : text
-	 * 		.class : Html.INPUT.text
 	 * 		.title : 
+	 * 		.class : Html.INPUT.text
 	 * 		.name : pExpertise
 	 * 		.classIndex : 0
 	 */
@@ -408,8 +408,8 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	 * pExpertise: with specific test context and state.
 	 *		.id : pExpertise
 	 * 		.type : text
-	 * 		.class : Html.INPUT.text
 	 * 		.title : 
+	 * 		.class : Html.INPUT.text
 	 * 		.name : pExpertise
 	 * 		.classIndex : 0
 	 */
@@ -423,8 +423,8 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	 * pFName: with default state.
 	 *		.id : pFName
 	 * 		.type : text
-	 * 		.class : Html.INPUT.text
 	 * 		.title : 
+	 * 		.class : Html.INPUT.text
 	 * 		.name : pFName
 	 * 		.classIndex : 0
 	 */
@@ -437,8 +437,8 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	 * pFName: with specific test context and state.
 	 *		.id : pFName
 	 * 		.type : text
-	 * 		.class : Html.INPUT.text
 	 * 		.title : 
+	 * 		.class : Html.INPUT.text
 	 * 		.name : pFName
 	 * 		.classIndex : 0
 	 */
@@ -452,8 +452,8 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	 * pISCID: with default state.
 	 *		.id : pISCID
 	 * 		.type : text
-	 * 		.class : Html.INPUT.text
 	 * 		.title : 
+	 * 		.class : Html.INPUT.text
 	 * 		.name : pISCID
 	 * 		.classIndex : 0
 	 */
@@ -466,8 +466,8 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	 * pISCID: with specific test context and state.
 	 *		.id : pISCID
 	 * 		.type : text
-	 * 		.class : Html.INPUT.text
 	 * 		.title : 
+	 * 		.class : Html.INPUT.text
 	 * 		.name : pISCID
 	 * 		.classIndex : 0
 	 */
@@ -481,8 +481,8 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	 * pInstitution: with default state.
 	 *		.id : pInstitution
 	 * 		.type : text
-	 * 		.class : Html.INPUT.text
 	 * 		.title : 
+	 * 		.class : Html.INPUT.text
 	 * 		.name : pInstitution
 	 * 		.classIndex : 0
 	 */
@@ -495,8 +495,8 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	 * pInstitution: with specific test context and state.
 	 *		.id : pInstitution
 	 * 		.type : text
-	 * 		.class : Html.INPUT.text
 	 * 		.title : 
+	 * 		.class : Html.INPUT.text
 	 * 		.name : pInstitution
 	 * 		.classIndex : 0
 	 */
@@ -510,8 +510,8 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	 * pLName: with default state.
 	 *		.id : pLName
 	 * 		.type : text
-	 * 		.class : Html.INPUT.text
 	 * 		.title : 
+	 * 		.class : Html.INPUT.text
 	 * 		.name : pLName
 	 * 		.classIndex : 0
 	 */
@@ -524,8 +524,8 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	 * pLName: with specific test context and state.
 	 *		.id : pLName
 	 * 		.type : text
-	 * 		.class : Html.INPUT.text
 	 * 		.title : 
+	 * 		.class : Html.INPUT.text
 	 * 		.name : pLName
 	 * 		.classIndex : 0
 	 */
@@ -539,8 +539,8 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	 * pState: with default state.
 	 *		.id : pState
 	 * 		.type : text
-	 * 		.class : Html.INPUT.text
 	 * 		.title : 
+	 * 		.class : Html.INPUT.text
 	 * 		.name : pState
 	 * 		.classIndex : 0
 	 */
@@ -553,8 +553,8 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	 * pState: with specific test context and state.
 	 *		.id : pState
 	 * 		.type : text
-	 * 		.class : Html.INPUT.text
 	 * 		.title : 
+	 * 		.class : Html.INPUT.text
 	 * 		.name : pState
 	 * 		.classIndex : 0
 	 */
@@ -568,8 +568,8 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	 * pTelephone: with default state.
 	 *		.id : pTelephone
 	 * 		.type : text
-	 * 		.class : Html.INPUT.text
 	 * 		.title : 
+	 * 		.class : Html.INPUT.text
 	 * 		.name : pTelephone
 	 * 		.classIndex : 0
 	 */
@@ -582,8 +582,8 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	 * pTelephone: with specific test context and state.
 	 *		.id : pTelephone
 	 * 		.type : text
-	 * 		.class : Html.INPUT.text
 	 * 		.title : 
+	 * 		.class : Html.INPUT.text
 	 * 		.name : pTelephone
 	 * 		.classIndex : 0
 	 */
@@ -597,8 +597,8 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	 * pZip: with default state.
 	 *		.id : pZip
 	 * 		.type : text
-	 * 		.class : Html.INPUT.text
 	 * 		.title : 
+	 * 		.class : Html.INPUT.text
 	 * 		.name : pZip
 	 * 		.classIndex : 0
 	 */
@@ -611,8 +611,8 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	 * pZip: with specific test context and state.
 	 *		.id : pZip
 	 * 		.type : text
-	 * 		.class : Html.INPUT.text
 	 * 		.title : 
+	 * 		.class : Html.INPUT.text
 	 * 		.name : pZip
 	 * 		.classIndex : 0
 	 */
@@ -626,8 +626,8 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	 * password: with default state.
 	 *		.id : 
 	 * 		.type : password
-	 * 		.class : Html.INPUT.password
 	 * 		.title : 
+	 * 		.class : Html.INPUT.password
 	 * 		.name : password
 	 * 		.classIndex : 0
 	 */
@@ -640,8 +640,8 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	 * password: with specific test context and state.
 	 *		.id : 
 	 * 		.type : password
-	 * 		.class : Html.INPUT.password
 	 * 		.title : 
+	 * 		.class : Html.INPUT.password
 	 * 		.name : password
 	 * 		.classIndex : 0
 	 */
@@ -655,8 +655,8 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	 * username: with default state.
 	 *		.id : 
 	 * 		.type : text
-	 * 		.class : Html.INPUT.text
 	 * 		.title : 
+	 * 		.class : Html.INPUT.text
 	 * 		.name : username
 	 * 		.classIndex : 0
 	 */
@@ -669,8 +669,8 @@ public abstract class STC05_SearchPanelistHelper extends RationalTestScript
 	 * username: with specific test context and state.
 	 *		.id : 
 	 * 		.type : text
-	 * 		.class : Html.INPUT.text
 	 * 		.title : 
+	 * 		.class : Html.INPUT.text
 	 * 		.name : username
 	 * 		.classIndex : 0
 	 */

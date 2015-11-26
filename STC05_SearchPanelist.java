@@ -77,13 +77,65 @@ public class STC05_SearchPanelist extends STC05_SearchPanelistHelper {
 		// Verification point
 		if (SUNNY) {
 
-			// Find and enter the first name of panelist
-			((TextGuiTestObject) text_pFName().find()).click();
-			browser_htmlBrowser(document_iscControlSystem2(), DEFAULT_FLAGS)
-					.inputChars(dpString("Fname"));
+			index = 0;
+			while (index < 9) {
+				if (index == 8) {
+					// Find and enter the first name of panelist
+					((TextGuiTestObject) text_pFName().find()).click();
+					browser_htmlBrowser(document_iscControlSystem2(),
+							DEFAULT_FLAGS).inputChars(dpString("Fname"));
+					
+				} else if (index == 7) {
+					((TextGuiTestObject) text_pInstitution().find()).click();
+					browser_htmlBrowser(document_iscControlSystem2(),
+							DEFAULT_FLAGS).inputChars("FIU");
+					
+				} else if (index == 6) {
+					((TextGuiTestObject) text_pAddress().find()).click();
+					browser_htmlBrowser(document_iscControlSystem2(),
+							DEFAULT_FLAGS).inputChars("ADD");
+					
+				} else if (index == 5) {
+					((TextGuiTestObject) text_pCity().find()).click();
+					browser_htmlBrowser(document_iscControlSystem2(),
+							DEFAULT_FLAGS).inputChars("CIT");
+					
+				} else if (index == 4) {
+					((TextGuiTestObject) text_pState().find()).click();
+					browser_htmlBrowser(document_iscControlSystem2(),
+							DEFAULT_FLAGS).inputChars("ST");
+					
+				} else if (index == 3) {
+					((TextGuiTestObject) text_pZip().find()).click();
+					browser_htmlBrowser(document_iscControlSystem2(),
+							DEFAULT_FLAGS).inputChars("Z");
+				
+				} else if (index == 2) {
+					((GuiTestObject) list_pGender().find()).click();
+					list_pGender().click(atText("Male"));
+					
+				} else if (index == 1) {
+					((TextGuiTestObject) text_pEthnicity().find()).click();
+					browser_htmlBrowser(document_iscControlSystem2(),
+							DEFAULT_FLAGS).inputChars("WHITE");
+					
+				} else if (index == 0) {
+					((TextGuiTestObject) text_pExpertise().find()).click();
+					browser_htmlBrowser(document_iscControlSystem2(),
+							DEFAULT_FLAGS).inputChars("C S");
+					
+				}
+				
+				// Click search button
+				((GuiTestObject) button_searchsubmit().find()).click();
+				
+				if (index != 8) {
+					// click search for panelist button
+					((GuiTestObject) link_searchForPanelists().find()).click();
+				}
+				index++;
+			}
 			
-			// Click search button
-			((GuiTestObject) button_searchsubmit().find()).click();
 
 			// successful search
 			browser_htmlBrowser().performTest(SuccessfulSearchVP());
