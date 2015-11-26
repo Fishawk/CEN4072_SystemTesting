@@ -24,6 +24,7 @@ public class STC05_SearchPanelist extends STC05_SearchPanelistHelper {
 		// reset the database
 		SetDB.resetDB(false);
 		
+		final boolean SUNNY  = dpString("TestType").equalsIgnoreCase("Sunny");
 		final boolean SUNNY1 = dpString("TestType").equalsIgnoreCase("Sunny1");
 		final boolean SUNNY2 = dpString("TestType").equalsIgnoreCase("Sunny2");
 		final boolean SUNNY3 = dpString("TestType").equalsIgnoreCase("Sunny3");
@@ -74,7 +75,20 @@ public class STC05_SearchPanelist extends STC05_SearchPanelistHelper {
 		((GuiTestObject) link_searchForPanelists().find()).click();
 		
 		// Verification point
-		if (SUNNY1) {
+		if (SUNNY) {
+
+			// Find and enter the first name of panelist
+			((TextGuiTestObject) text_pFName().find()).click();
+			browser_htmlBrowser(document_iscControlSystem2(), DEFAULT_FLAGS)
+					.inputChars(dpString("Fname"));
+			
+			// Click search button
+			((GuiTestObject) button_searchsubmit().find()).click();
+
+			// successful search
+			browser_htmlBrowser().performTest(SuccessfulSearchVP());
+			
+		} else if (SUNNY1) {
 
 			// Find and enter the first name of panelist
 			((TextGuiTestObject) text_pFName().find()).click();
